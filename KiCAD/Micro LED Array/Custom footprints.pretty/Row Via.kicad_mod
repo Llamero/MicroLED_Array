@@ -1,0 +1,13 @@
+(footprint "Row Via" (version 20221018) (generator pcbnew)
+  (layer "F.Cu")
+  (attr through_hole)
+  (fp_text reference "REF**" (at 0.43 -3.62 unlocked) (layer "User.4") hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp b02d732b-9a4b-4c16-8b44-70d37e86b812)
+  )
+  (fp_text value "Row Via" (at 0 1 unlocked) (layer "F.Fab") hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp ceec8396-8915-49f2-8958-664e4afc34aa)
+  )
+  (pad "1" thru_hole roundrect (at 0.08 0 45) (size 0.4 0.4) (drill 0.25) (layers "*.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.25) (tstamp 8a66d63b-8b53-4799-998f-51eb1be1fafd))
+)

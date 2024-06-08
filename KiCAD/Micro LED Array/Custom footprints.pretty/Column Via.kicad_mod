@@ -1,0 +1,13 @@
+(footprint "Column Via" (version 20221018) (generator pcbnew)
+  (layer "F.Cu")
+  (attr through_hole)
+  (fp_text reference "REF**" (at 0 -0.5 unlocked) (layer "User.5") hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp c958043f-e782-409c-b798-264d0ea152a5)
+  )
+  (fp_text value "Column Via" (at 0 1 unlocked) (layer "F.Fab") hide
+      (effects (font (size 1 1) (thickness 0.15)))
+    (tstamp b479c09f-460f-4040-886c-e8f2c2fc42dc)
+  )
+  (pad "1" smd roundrect (at 0 0) (size 0.36 0.45) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25) (tstamp ebdb53cb-6479-4637-8431-b20864885c4d))
+)
