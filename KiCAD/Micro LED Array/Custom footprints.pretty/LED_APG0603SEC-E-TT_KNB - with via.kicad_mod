@@ -1,29 +1,166 @@
-(footprint "LED_APG0603SEC-E-TT_KNB - with via" (version 20221018) (generator pcbnew)
-  (layer "F.Cu")
-  (tags "APG0603SEC-E-TT ")
-  (attr smd)
-  (fp_text reference "REF**" (at 0.37 -1.52 unlocked) (layer "User.3") hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp a9f7a140-c4df-4979-be19-c7f36a1cf921)
-  )
-  (fp_text value "LED_APG0603SEC-E-TT_KNB - with via" (at 0 0 unlocked) (layer "F.Fab") hide
-      (effects (font (size 1 1) (thickness 0.15)))
-    (tstamp 8608b295-141a-4dcb-a2f7-19c829729497)
-  )
-  (fp_line (start -0.3683 -0.2159) (end -0.3683 0.2159)
-    (stroke (width 0.0254) (type solid)) (layer "F.Fab") (tstamp 50ce3a59-4ec9-4afb-8f0c-cf93b975ed51))
-  (fp_line (start -0.3683 0.2159) (end 0.3683 0.2159)
-    (stroke (width 0.0254) (type solid)) (layer "F.Fab") (tstamp aa10ecb8-1f05-48f0-afb7-77bcf21db105))
-  (fp_line (start 0.3683 -0.2159) (end -0.3683 -0.2159)
-    (stroke (width 0.0254) (type solid)) (layer "F.Fab") (tstamp 10514390-c00e-4588-9bc9-45c9385397d4))
-  (fp_line (start 0.3683 0.2159) (end 0.3683 -0.2159)
-    (stroke (width 0.0254) (type solid)) (layer "F.Fab") (tstamp e9de09c1-da60-4882-b6a7-e8b9a9a0095c))
-  (pad "" smd rect (at 0.2032 0) (size 0.2032 0.3556) (layers "F.Paste" "F.Mask") (tstamp e66a52d2-3862-4934-a845-9e9705eb0f48))
-  (pad "1" smd rect (at -0.2032 0) (size 0.2032 0.3556) (layers "F.Cu" "F.Paste" "F.Mask") (tstamp 4d30e3c6-1f4d-4015-841a-92df4303b5fe))
-  (pad "2" thru_hole roundrect (at 0.303 0) (size 0.55 0.55) (drill 0.25) (layers "*.Cu") (roundrect_rratio 0.25) (tstamp 66e764db-1872-419d-8d7e-63ba4e6a9b78))
-  (model "${KIPRJMOD}/CAD Models/LED_APG0603SEC-E-TT_KNB.step"
-    (offset (xyz 0 0 0))
-    (scale (xyz 1 1 1))
-    (rotate (xyz 0 0 0))
-  )
+(footprint "LED_APG0603SEC-E-TT_KNB - with via"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(tags "APG0603SEC-E-TT ")
+	(property "Reference" "D7"
+		(at 0.37 -1.52 0)
+		(unlocked yes)
+		(layer "User.3")
+		(hide yes)
+		(uuid "acd2a8f8-644b-4b3b-8d28-5925841c8b4f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "LED"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cfd5879c-3a7d-4a61-9365-4795360fefcd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "095d8a70-e53a-43cf-96e0-bae8b008f245")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5f3856de-4917-49d2-a795-c157d7fbdbbe")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "674009ea-a58d-4550-a9fd-0bf231ff7bcc")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Manufacturer" "Kingbright "
+		(at 0.505 3.205 90)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "07f21c45-f428-4fff-9715-ac9064ddc318")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Part" "APG0603SEC-E-TT "
+		(at 0.505 3.205 90)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f13aa73c-3729-4103-bcd2-33c09b7dffc6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -0.3683 -0.2159)
+		(end -0.3683 0.2159)
+		(stroke
+			(width 0.0254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e41b6131-8d4a-4dd0-8596-ed7e32761733")
+	)
+	(fp_line
+		(start -0.3683 0.2159)
+		(end 0.3683 0.2159)
+		(stroke
+			(width 0.0254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6b725e68-d3a4-45f0-8f6c-54805667866f")
+	)
+	(fp_line
+		(start 0.3683 -0.2159)
+		(end -0.3683 -0.2159)
+		(stroke
+			(width 0.0254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "51c786ad-cd2e-4faf-8baa-02eae75ff1ea")
+	)
+	(fp_line
+		(start 0.3683 0.2159)
+		(end 0.3683 -0.2159)
+		(stroke
+			(width 0.0254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "33e7e386-198b-4142-955d-6b8a37ad5619")
+	)
+	(pad "" smd rect
+		(at 0 0.1778 270)
+		(size 0.2032 0.3556)
+		(layers "F.Paste" "F.Mask")
+		(uuid "b0de4858-175d-451d-86f5-96480f4762de")
+	)
+	(pad "1" smd rect
+		(at 0 -0.1778 270)
+		(size 0.2032 0.3556)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "818920ca-b0e9-449f-aa1f-2db2d89a9f3a")
+	)
+	(pad "2" thru_hole roundrect
+		(at 0 0.325 90)
+		(size 0.55 0.55)
+		(drill 0.25)
+		(layers "*.Cu")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.25)
+		(uuid "be8738bb-c9b1-4d67-822f-2883f2edf511")
+	)
+	(model "${KIPRJMOD}/CAD Models/LED_APG0603SEC-E-TT_KNB.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 90)
+		)
+	)
 )
