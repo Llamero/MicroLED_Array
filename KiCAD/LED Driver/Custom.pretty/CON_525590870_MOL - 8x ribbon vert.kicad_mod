@@ -372,4 +372,15 @@
 			(xyz 90 0 0)
 		)
 	)
+	(model "C:/Users/Ben/Documents/GitHub/MicroLED_Array/KiCAD/LED Driver/CAD Models/0525590870.stp"
+		(offset
+			(xyz 0 -1.1 3)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 90 0 0)
+		)
+	)
 )

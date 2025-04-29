@@ -152,7 +152,7 @@
 		(roundrect_rratio 0.25)
 		(uuid "be8738bb-c9b1-4d67-822f-2883f2edf511")
 	)
-	(model "${KIPRJMOD}/CAD Models/LED_APG0603SEC-E-TT_KNB.step"
+	(model "C:/Users/Ben/Documents/GitHub/MicroLED_Array/KiCAD/Micro LED Array/CAD Models/LED_APG0603SEC-E-TT_KNB.step"
 		(offset
 			(xyz 0 0 0)
 		)

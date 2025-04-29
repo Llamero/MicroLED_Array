@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Custom footprints")(type "KiCad")(uri "C:/Users/Ben/Documents/GitHub/MicroLED_Array/KiCAD/Micro LED Array/Custom footprints.pretty")(options "")(descr ""))
+)

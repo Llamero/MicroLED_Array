@@ -1,0 +1,8967 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "db657c83-5849-467e-b25d-f96369a10bc7")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Device:LED"
+			(pin_numbers hide)
+			(pin_names
+				(offset 1.016) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "LED"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Light emitting diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "LED diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "LED* LED_SMD:* LED_THT:*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "LED_0_1"
+				(polyline
+					(pts
+						(xy -1.27 -1.27) (xy -1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.27 0) (xy 1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.27) (xy 1.27 1.27) (xy -1.27 0) (xy 1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.048 -0.762) (xy -4.572 -2.286) (xy -3.81 -2.286) (xy -4.572 -2.286) (xy -4.572 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.778 -0.762) (xy -3.302 -2.286) (xy -2.54 -2.286) (xy -3.302 -2.286) (xy -3.302 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "LED_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 106.68 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "01219692-b566-426d-91b3-5f37e8da1d89")
+	)
+	(junction
+		(at 96.52 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "023ed2a5-aee0-4438-b6b3-77d265459395")
+	)
+	(junction
+		(at 74.93 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0398b53d-29a9-4109-85aa-e2d3c2af951b")
+	)
+	(junction
+		(at 125.73 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0a4c3f8d-f8f9-43b9-869a-87a438f47da3")
+	)
+	(junction
+		(at 96.52 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0c333a9f-20a7-4666-8599-5fc0d13ac5fb")
+	)
+	(junction
+		(at 85.09 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0d5440b3-1376-4373-b6bc-94e95f41b8d0")
+	)
+	(junction
+		(at 115.57 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0e846cce-c483-43f9-a451-4b95491cd62a")
+	)
+	(junction
+		(at 116.84 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0f458520-f7df-460c-be27-0095c9b8932a")
+	)
+	(junction
+		(at 74.93 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0f4d2822-ca81-42fc-adba-c08c479363e4")
+	)
+	(junction
+		(at 96.52 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1020e240-b444-437e-b9f9-729b4e1a7536")
+	)
+	(junction
+		(at 127 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "11a0bbde-53c9-4dce-9d60-332b529297a6")
+	)
+	(junction
+		(at 86.36 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "15b9cce6-9d0b-4f8c-aa07-685d3f8fda40")
+	)
+	(junction
+		(at 95.25 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1b0165bc-89b4-47ef-b5b7-f9e24274d500")
+	)
+	(junction
+		(at 125.73 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2288eb1a-0c1b-4479-9f82-7b1106192b88")
+	)
+	(junction
+		(at 115.57 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "237eb521-fddc-459b-a4e0-61f6a859b621")
+	)
+	(junction
+		(at 86.36 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "27691b04-11ba-4b82-848d-8e46fdd33877")
+	)
+	(junction
+		(at 95.25 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "27d01853-9e46-40c0-bb2e-912f651dcb78")
+	)
+	(junction
+		(at 125.73 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "283077d1-f10a-42ae-bcbf-2948504a5631")
+	)
+	(junction
+		(at 86.36 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2a0f0ff3-216d-4742-87f2-330fcf5c5153")
+	)
+	(junction
+		(at 105.41 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2adab152-5941-4a78-8405-e37af9c0c14e")
+	)
+	(junction
+		(at 95.25 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2e314aee-1b39-41c3-8410-a39309a42f94")
+	)
+	(junction
+		(at 116.84 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "316cc290-d758-479b-a8fa-7432c3c70e0d")
+	)
+	(junction
+		(at 127 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "33e27a22-7739-4830-8e79-1931610c620a")
+	)
+	(junction
+		(at 96.52 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "34b57676-cf71-40e5-b5ec-f4132819c24f")
+	)
+	(junction
+		(at 76.2 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "34eaaa2b-d6b9-4203-8652-0094a7dfcd83")
+	)
+	(junction
+		(at 115.57 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "35d3a870-e600-4197-8f92-567efb6a6618")
+	)
+	(junction
+		(at 85.09 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "385e34fa-20b4-4eb7-9ec8-37d2767bfac4")
+	)
+	(junction
+		(at 76.2 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "38f414ff-0070-4c90-9ae7-9aa4a19c11b9")
+	)
+	(junction
+		(at 85.09 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4e4fae75-763e-4511-ba22-a7de93dc13b0")
+	)
+	(junction
+		(at 115.57 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "569188ff-c9fb-44d2-9eb6-a3ed30dd85d4")
+	)
+	(junction
+		(at 115.57 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "579164c2-e4ac-431c-93c8-ea0d38c7b2c6")
+	)
+	(junction
+		(at 106.68 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5d767a7c-a077-4557-b5fd-7c30669f3d8c")
+	)
+	(junction
+		(at 66.04 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5f9b20b7-b6c5-461d-8255-f6da1c0d81d4")
+	)
+	(junction
+		(at 115.57 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "611b70be-c95e-4b92-a840-3b4ed0fcf75d")
+	)
+	(junction
+		(at 115.57 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "616cb9ac-bd39-4455-bb4d-28adeb5745ee")
+	)
+	(junction
+		(at 127 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "645cd2b5-7ee8-4eef-848e-61a8881b8b37")
+	)
+	(junction
+		(at 66.04 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "64917e73-9652-46e2-8676-a6022817399a")
+	)
+	(junction
+		(at 105.41 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "65c2dc57-959a-4ae2-87b7-3811701b4609")
+	)
+	(junction
+		(at 66.04 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "689604e2-a620-4b84-bf06-3360b7d419b8")
+	)
+	(junction
+		(at 66.04 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7069dda9-cfe8-46b9-8773-a609f3acd8e0")
+	)
+	(junction
+		(at 76.2 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7082b0d2-5142-404d-8cad-3da9a4eee9f1")
+	)
+	(junction
+		(at 76.2 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "75666ece-0770-45ce-b890-4c717c0658db")
+	)
+	(junction
+		(at 55.88 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "759e92db-82f3-4f0e-ab52-481a2b85870e")
+	)
+	(junction
+		(at 116.84 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "79e83a7f-faa6-434a-9fce-b88bfd729ab7")
+	)
+	(junction
+		(at 105.41 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "79ebd5bb-efa5-4e5f-95bf-2a3dde727a8a")
+	)
+	(junction
+		(at 106.68 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "818cc068-ee52-4385-b973-19da184513cf")
+	)
+	(junction
+		(at 116.84 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "857813f6-fdda-4f1e-af51-7147067b0091")
+	)
+	(junction
+		(at 55.88 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "85a3acdd-83ed-4d88-9927-31bd5e4bf2c5")
+	)
+	(junction
+		(at 85.09 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "85e12247-2abb-4320-896a-6a501b0456d2")
+	)
+	(junction
+		(at 74.93 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8d4f500d-4b55-4432-9852-06f874b532a1")
+	)
+	(junction
+		(at 66.04 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "92d80953-8439-44c0-9c54-5becf51e9fc0")
+	)
+	(junction
+		(at 96.52 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "94c210dc-8e77-4d1f-aa76-8b184e0c25b3")
+	)
+	(junction
+		(at 86.36 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "97063fc9-aae3-4740-aa51-7956dc354e48")
+	)
+	(junction
+		(at 106.68 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9d9f0bb6-cf20-441c-8b56-62205a78efbf")
+	)
+	(junction
+		(at 96.52 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a239ac2d-9379-4fa8-bc8c-c99db5818ba0")
+	)
+	(junction
+		(at 86.36 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a78729d8-3b2c-418e-916f-8af540e5eca4")
+	)
+	(junction
+		(at 95.25 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "af23c11d-e9b9-45bb-b0c1-448b7b131e1c")
+	)
+	(junction
+		(at 116.84 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b006f40c-a3dc-4ba6-b8bb-816880e08f6c")
+	)
+	(junction
+		(at 105.41 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b00ae19c-db34-437f-820a-96554bf95294")
+	)
+	(junction
+		(at 55.88 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b0141fff-d577-4528-97a5-e49364c09f1e")
+	)
+	(junction
+		(at 125.73 97.79)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b4070e56-55aa-4249-ac39-2ceb3caadde8")
+	)
+	(junction
+		(at 86.36 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b415ce45-6e89-4703-b111-f92bf757c0a9")
+	)
+	(junction
+		(at 115.57 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b41aa4ad-c4d8-401f-bd39-d004a875a99c")
+	)
+	(junction
+		(at 125.73 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b4759a52-3497-4f2c-93a9-02e87c418c7f")
+	)
+	(junction
+		(at 125.73 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b8e39bd6-bebf-4e64-a2b5-ba6364243144")
+	)
+	(junction
+		(at 95.25 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b935d989-b538-4829-ad66-5743c08b1926")
+	)
+	(junction
+		(at 85.09 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b946be3d-5245-447f-a3c1-1db3b5167f87")
+	)
+	(junction
+		(at 74.93 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b97bb99c-a31a-4e76-a503-3d06fc5f8c05")
+	)
+	(junction
+		(at 116.84 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ba045caf-b2da-4d57-8d2c-10fa5e433fc7")
+	)
+	(junction
+		(at 106.68 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bb6e0446-62a6-49a5-abf3-0587c70a90dc")
+	)
+	(junction
+		(at 95.25 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bcd7aac6-2d42-4541-9d1a-e2078e447acd")
+	)
+	(junction
+		(at 55.88 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bdd65805-0f04-45bf-a13b-68d4b0f12582")
+	)
+	(junction
+		(at 74.93 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bde80e95-2f5d-406c-9902-5fb8fd0186dd")
+	)
+	(junction
+		(at 106.68 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bfc0b599-60e6-4405-a8cb-9dc8444b7e2d")
+	)
+	(junction
+		(at 125.73 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bff0ea91-ae6b-4252-b1aa-5e0007f27216")
+	)
+	(junction
+		(at 76.2 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c02adda7-5047-4ba2-b510-1752eb7d9943")
+	)
+	(junction
+		(at 66.04 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c3c1e872-0c37-4b85-ab8d-627e194e99a5")
+	)
+	(junction
+		(at 127 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c5e9c4c8-506d-40dd-9807-2974dce070b9")
+	)
+	(junction
+		(at 55.88 59.69)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ce2ab5ca-80bc-461d-8eea-662e65090d23")
+	)
+	(junction
+		(at 85.09 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d02cbbf7-3320-4e10-a67a-df477d916d82")
+	)
+	(junction
+		(at 106.68 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d08a5f4a-bb7d-4f18-b18d-634436c17a37")
+	)
+	(junction
+		(at 127 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d300dce3-5afd-4833-a274-360a12bae4c7")
+	)
+	(junction
+		(at 55.88 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d4a6e0c6-d0bc-4b61-81d8-0eafb353d5e9")
+	)
+	(junction
+		(at 76.2 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d56eb641-e717-4370-aa26-0d4ca5da34a0")
+	)
+	(junction
+		(at 95.25 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "dc0a26e4-bfd2-4209-8d19-55188d05efbb")
+	)
+	(junction
+		(at 86.36 104.14)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e14fb2c0-24ee-48da-8220-c962afac509e")
+	)
+	(junction
+		(at 105.41 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e20cb3ce-a081-4f81-a119-6de1f4e5939a")
+	)
+	(junction
+		(at 74.93 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e332bdd3-dd71-4b4f-8c00-11c190f66b75")
+	)
+	(junction
+		(at 95.25 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e40cf503-e0c1-4283-afb0-2772b5e456fb")
+	)
+	(junction
+		(at 125.73 80.01)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e487e341-d331-4a86-8010-c44a18e82e15")
+	)
+	(junction
+		(at 127 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e56fe457-9c3f-45b4-96ac-900d18b087ed")
+	)
+	(junction
+		(at 74.93 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e5af3c0d-5440-49a1-a70e-4e317988b2b5")
+	)
+	(junction
+		(at 74.93 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e6fe5003-a629-4593-bb75-76a4b99765db")
+	)
+	(junction
+		(at 96.52 68.58)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eac13219-68ca-4ea3-9aa8-6ad249b0eadc")
+	)
+	(junction
+		(at 85.09 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "eeb626a7-9076-41fd-910e-827a35ed5888")
+	)
+	(junction
+		(at 66.04 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ef9960fd-dbee-4754-8eb9-a56a48fa4aff")
+	)
+	(junction
+		(at 105.41 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "efe8fd32-cc52-4f16-85c7-59da9c65e6b1")
+	)
+	(junction
+		(at 55.88 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f1ad4ab9-7e83-4a88-9a62-6d0bcb756302")
+	)
+	(junction
+		(at 105.41 44.45)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f5960427-78d1-497a-9b8d-5b2daca84cef")
+	)
+	(junction
+		(at 85.09 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f617e8b0-fcff-41da-a85d-002f9de472d9")
+	)
+	(junction
+		(at 116.84 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f6e063a0-4934-4e18-ad29-904c03208b3d")
+	)
+	(junction
+		(at 76.2 86.36)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fb0ee790-c118-416a-8bc4-77efac0c38aa")
+	)
+	(junction
+		(at 127 77.47)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fdc87d94-872a-49db-a6ad-22dcab2c9f4b")
+	)
+	(junction
+		(at 105.41 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "fe2250b9-77ae-4335-91db-c2f2f742ebf1")
+	)
+	(wire
+		(pts
+			(xy 86.36 68.58) (xy 86.36 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00caeffc-ab59-403e-bb18-0604f50b66a9")
+	)
+	(wire
+		(pts
+			(xy 127 68.58) (xy 127 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "00f37c84-859c-4b4a-b290-51475daf7492")
+	)
+	(wire
+		(pts
+			(xy 64.77 44.45) (xy 74.93 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03369c0d-b6aa-4a74-bbac-12c866475835")
+	)
+	(wire
+		(pts
+			(xy 115.57 41.91) (xy 114.3 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "037535ec-0a3d-4e2f-9ac7-87a8059839cc")
+	)
+	(wire
+		(pts
+			(xy 95.25 97.79) (xy 95.25 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "059e35be-4add-4076-9210-bf5330933810")
+	)
+	(wire
+		(pts
+			(xy 105.41 41.91) (xy 104.14 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0602a4ed-2129-488c-9367-4acdd9509c5a")
+	)
+	(wire
+		(pts
+			(xy 55.88 95.25) (xy 55.88 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "07582c40-b037-432a-8f45-dbfe99bb7084")
+	)
+	(wire
+		(pts
+			(xy 66.04 86.36) (xy 66.04 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "079307f8-0a22-4c11-b6cb-13b30e9c5a81")
+	)
+	(wire
+		(pts
+			(xy 115.57 68.58) (xy 114.3 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09482eb6-875d-4f21-8138-c9a610e44b7f")
+	)
+	(wire
+		(pts
+			(xy 96.52 86.36) (xy 96.52 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0cf50e69-8f0a-4c8a-8ed4-0589bf2747bb")
+	)
+	(wire
+		(pts
+			(xy 74.93 80.01) (xy 74.93 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0d136602-c85c-4c24-b08d-2a10633153e7")
+	)
+	(wire
+		(pts
+			(xy 106.68 59.69) (xy 106.68 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0dcabf58-edc0-4b97-9840-c7bcfb5dbdcd")
+	)
+	(wire
+		(pts
+			(xy 115.57 71.12) (xy 125.73 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0de4c938-fd33-4171-adc7-c935f4b34f14")
+	)
+	(wire
+		(pts
+			(xy 85.09 62.23) (xy 95.25 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f2444cf-5df5-4b42-860f-2be8883af2dc")
+	)
+	(wire
+		(pts
+			(xy 134.62 86.36) (xy 135.89 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1074b502-0cae-4706-bc71-8946e2d173bd")
+	)
+	(wire
+		(pts
+			(xy 64.77 68.58) (xy 64.77 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10f60f6f-ffb7-4aa3-8a4b-73f9eba68a3f")
+	)
+	(wire
+		(pts
+			(xy 105.41 97.79) (xy 105.41 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "10f8574e-0de7-454b-92eb-24d230aaa821")
+	)
+	(wire
+		(pts
+			(xy 105.41 104.14) (xy 104.14 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "110191fe-729c-468a-b560-f5f1bea536f4")
+	)
+	(wire
+		(pts
+			(xy 105.41 50.8) (xy 104.14 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12882ecc-440a-459e-aa29-dee839cc82af")
+	)
+	(wire
+		(pts
+			(xy 55.88 104.14) (xy 55.88 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "12c9e82e-062c-417a-9600-b20979f662d7")
+	)
+	(wire
+		(pts
+			(xy 115.57 97.79) (xy 125.73 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1677bbcd-8259-4f33-b6cf-3892776fd0f6")
+	)
+	(wire
+		(pts
+			(xy 74.93 53.34) (xy 74.93 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16790c53-e582-480f-8d07-121bdab8dfef")
+	)
+	(wire
+		(pts
+			(xy 105.41 77.47) (xy 104.14 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17aba751-4a75-4903-a0f4-9c637043f2a7")
+	)
+	(wire
+		(pts
+			(xy 105.41 59.69) (xy 104.14 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "189374d6-8549-4ab5-9bd7-ce3fce02b5f9")
+	)
+	(wire
+		(pts
+			(xy 135.89 80.01) (xy 135.89 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18d33ae9-c40f-441f-b77e-7f230c038e32")
+	)
+	(wire
+		(pts
+			(xy 86.36 59.69) (xy 86.36 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "19a4d111-363e-4d4b-a38d-3dd87cda6c39")
+	)
+	(wire
+		(pts
+			(xy 74.93 62.23) (xy 85.09 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a9e28d8-e6ee-4a44-bbb6-4777845ad77a")
+	)
+	(wire
+		(pts
+			(xy 86.36 86.36) (xy 86.36 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ab7773d-0ffa-4b05-aede-595dee8c4a56")
+	)
+	(wire
+		(pts
+			(xy 95.25 41.91) (xy 93.98 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1af180a4-c7f5-4d7b-90cb-18d67fba438a")
+	)
+	(wire
+		(pts
+			(xy 63.5 59.69) (xy 64.77 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d41bc09-dcad-41ae-afbf-f89389c3cf39")
+	)
+	(wire
+		(pts
+			(xy 66.04 68.58) (xy 66.04 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1dcaced6-e2d1-4a73-92e5-6aaedc706118")
+	)
+	(wire
+		(pts
+			(xy 66.04 104.14) (xy 66.04 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e58c864-2d0f-473c-b776-49d942d6a42c")
+	)
+	(wire
+		(pts
+			(xy 115.57 35.56) (xy 125.73 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21095b61-4c3e-4f86-a34d-d0a9b3e82ee9")
+	)
+	(wire
+		(pts
+			(xy 96.52 50.8) (xy 96.52 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22b6316b-ce9f-4f2c-ae19-d23b8ed85056")
+	)
+	(wire
+		(pts
+			(xy 115.57 71.12) (xy 115.57 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22bdda42-dcde-452b-a75e-33e7d652b94f")
+	)
+	(wire
+		(pts
+			(xy 105.41 44.45) (xy 115.57 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22daaaf3-6694-40e1-9418-386711a16483")
+	)
+	(wire
+		(pts
+			(xy 105.41 35.56) (xy 105.41 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2345c0e1-3ad4-4135-a2ba-9f4b5cc73f07")
+	)
+	(wire
+		(pts
+			(xy 125.73 88.9) (xy 135.89 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23d91ea4-3e69-45a8-82a5-5a0f5f15abfd")
+	)
+	(wire
+		(pts
+			(xy 105.41 53.34) (xy 115.57 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24ad60f4-016d-477c-a17f-2d0c90491110")
+	)
+	(wire
+		(pts
+			(xy 125.73 77.47) (xy 124.46 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "255a0c9d-9514-4f84-8732-76a4c4ba8b71")
+	)
+	(wire
+		(pts
+			(xy 86.36 104.14) (xy 86.36 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "257c635b-340f-4edd-9ac2-c0781e320fcb")
+	)
+	(wire
+		(pts
+			(xy 115.57 62.23) (xy 125.73 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "25b230bb-8f2b-4a6d-bca3-c660fc52f547")
+	)
+	(wire
+		(pts
+			(xy 95.25 80.01) (xy 95.25 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2627fdb7-97c2-4fbe-a4e0-95a8afc1cb21")
+	)
+	(wire
+		(pts
+			(xy 115.57 44.45) (xy 115.57 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27a1da77-2922-4702-a381-f3ee8e72cd4f")
+	)
+	(wire
+		(pts
+			(xy 85.09 59.69) (xy 83.82 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "29880da5-df9e-4bee-93ee-312c0b0993b9")
+	)
+	(wire
+		(pts
+			(xy 76.2 41.91) (xy 76.2 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2a96c678-6c35-4e02-88ef-e75a51d61624")
+	)
+	(wire
+		(pts
+			(xy 116.84 77.47) (xy 116.84 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2aac65ce-3a73-4281-befa-3b67acd5dfe3")
+	)
+	(wire
+		(pts
+			(xy 125.73 104.14) (xy 124.46 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2bd71807-51a8-4b94-960b-a6b4fae56767")
+	)
+	(wire
+		(pts
+			(xy 96.52 68.58) (xy 96.52 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2da20d32-9cba-4038-a327-4f7b184f8063")
+	)
+	(wire
+		(pts
+			(xy 64.77 59.69) (xy 64.77 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f1b596a-b688-46d3-900f-9ffd63ea89de")
+	)
+	(wire
+		(pts
+			(xy 116.84 95.25) (xy 116.84 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f1facb3-a919-4258-9ee9-1e02a5d10f9d")
+	)
+	(wire
+		(pts
+			(xy 74.93 53.34) (xy 85.09 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "304e9c9b-4b12-4f4e-9967-f772f2a1b957")
+	)
+	(wire
+		(pts
+			(xy 106.68 68.58) (xy 106.68 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "311f369c-378f-478d-8f66-f04a1280d41a")
+	)
+	(wire
+		(pts
+			(xy 115.57 88.9) (xy 115.57 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31ca5ca7-6a27-41e4-ad0b-a3e34039fb91")
+	)
+	(wire
+		(pts
+			(xy 106.68 104.14) (xy 106.68 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37ed8aef-29ae-4cfc-be8a-e8bbacbc204a")
+	)
+	(wire
+		(pts
+			(xy 116.84 41.91) (xy 116.84 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "382b93bd-697a-4547-b5d1-76abf340eb59")
+	)
+	(wire
+		(pts
+			(xy 125.73 62.23) (xy 125.73 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3af76491-9e2e-4955-b59e-b4d1a4ca00cc")
+	)
+	(wire
+		(pts
+			(xy 95.25 50.8) (xy 93.98 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c8efd9a-9873-4576-b3ce-7314b77a521f")
+	)
+	(wire
+		(pts
+			(xy 96.52 95.25) (xy 96.52 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d65f684-57e3-4a1b-951a-ea42f83d4215")
+	)
+	(wire
+		(pts
+			(xy 85.09 41.91) (xy 83.82 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3f01dd1b-167e-4bf3-8c7a-3d53ef6a041f")
+	)
+	(wire
+		(pts
+			(xy 125.73 71.12) (xy 125.73 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4032d7a2-a47b-4af5-b0e2-7765f3c5388a")
+	)
+	(wire
+		(pts
+			(xy 73.66 86.36) (xy 74.93 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40b47d9d-ec30-44bf-9f7b-71268cd067a5")
+	)
+	(wire
+		(pts
+			(xy 125.73 41.91) (xy 124.46 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40b5b074-513f-4268-97e9-4e54eaa948bd")
+	)
+	(wire
+		(pts
+			(xy 76.2 59.69) (xy 76.2 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "414e6c68-6bcc-4fb5-8cb4-147258c1088e")
+	)
+	(wire
+		(pts
+			(xy 73.66 104.14) (xy 74.93 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "419097f6-dd33-43c7-9ceb-f977dd9893a4")
+	)
+	(wire
+		(pts
+			(xy 85.09 35.56) (xy 95.25 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "419b7b4f-1398-4733-a700-da73a87fb31e")
+	)
+	(wire
+		(pts
+			(xy 95.25 80.01) (xy 105.41 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42801311-1db2-45b1-9a7b-438066269c6b")
+	)
+	(wire
+		(pts
+			(xy 85.09 97.79) (xy 85.09 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42ae7afc-882a-46c2-8a76-b157cd0591f5")
+	)
+	(wire
+		(pts
+			(xy 85.09 88.9) (xy 95.25 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "46241497-982b-48a7-86be-38ba8460294b")
+	)
+	(wire
+		(pts
+			(xy 64.77 86.36) (xy 64.77 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a0c036e-b9c3-4f98-855b-2c5323e21580")
+	)
+	(wire
+		(pts
+			(xy 85.09 50.8) (xy 83.82 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d8f17b7-30cc-476b-9cdf-ba3acf17ac11")
+	)
+	(wire
+		(pts
+			(xy 105.41 53.34) (xy 105.41 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4dbeaa0e-fbf1-42c0-bf28-b48bd6646829")
+	)
+	(wire
+		(pts
+			(xy 95.25 71.12) (xy 105.41 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f2fc230-6878-4e73-a583-e1fc1ab7dcd2")
+	)
+	(wire
+		(pts
+			(xy 105.41 95.25) (xy 104.14 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "51b80704-146e-4e68-b365-2fe6be6e31a5")
+	)
+	(wire
+		(pts
+			(xy 135.89 88.9) (xy 135.89 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "526d5c4f-6358-4968-a194-3776135bc889")
+	)
+	(wire
+		(pts
+			(xy 55.88 86.36) (xy 55.88 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54e514de-d5c3-48a0-a9f2-b2eed1d0f393")
+	)
+	(wire
+		(pts
+			(xy 95.25 53.34) (xy 95.25 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "54f5a517-2f66-4725-910f-d193918bf5c8")
+	)
+	(wire
+		(pts
+			(xy 85.09 62.23) (xy 85.09 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5571838a-ae8a-4a13-8213-1f8df58f2e83")
+	)
+	(wire
+		(pts
+			(xy 85.09 86.36) (xy 83.82 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "561d7d72-20c2-4576-b47d-a735c8bd21a5")
+	)
+	(wire
+		(pts
+			(xy 115.57 80.01) (xy 125.73 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5844da4a-3433-4ae6-8f49-09bfa96df206")
+	)
+	(wire
+		(pts
+			(xy 96.52 77.47) (xy 96.52 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5945c97a-700e-4b66-8924-a2aa13f6bc42")
+	)
+	(wire
+		(pts
+			(xy 105.41 71.12) (xy 105.41 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a9c5f94-52e7-43eb-ba09-b26645a1cb3c")
+	)
+	(wire
+		(pts
+			(xy 134.62 50.8) (xy 135.89 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d033c3f-6e8a-4791-b57a-d252a1bd5bc4")
+	)
+	(wire
+		(pts
+			(xy 127 41.91) (xy 127 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d1fe3ac-14ae-45e1-b2f2-f2cdced1dc42")
+	)
+	(wire
+		(pts
+			(xy 125.73 68.58) (xy 124.46 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ff3e1a4-77a9-48ce-8af1-e777a527f86f")
+	)
+	(wire
+		(pts
+			(xy 55.88 59.69) (xy 55.88 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "619bbc33-0331-4a02-a442-7e47d59647f2")
+	)
+	(wire
+		(pts
+			(xy 105.41 88.9) (xy 105.41 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "624390c9-d9b7-46af-9b3a-1e7af7a97ea6")
+	)
+	(wire
+		(pts
+			(xy 66.04 50.8) (xy 66.04 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6335808f-d6c9-4b01-88d1-a325d053e4f5")
+	)
+	(wire
+		(pts
+			(xy 76.2 50.8) (xy 76.2 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63792c23-4078-47b2-97c1-b3fcdf1a188f")
+	)
+	(wire
+		(pts
+			(xy 95.25 35.56) (xy 95.25 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64845ce7-227d-4f7d-899b-f7fb36a43f5b")
+	)
+	(wire
+		(pts
+			(xy 74.93 44.45) (xy 85.09 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64f02b98-71d7-4e6a-81d0-f2fe5398cdf3")
+	)
+	(wire
+		(pts
+			(xy 135.89 53.34) (xy 135.89 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6686e703-731b-49a3-9e38-9428bc76d617")
+	)
+	(wire
+		(pts
+			(xy 95.25 97.79) (xy 105.41 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "66c06899-ce21-4dfe-8467-cb1915f7a00f")
+	)
+	(wire
+		(pts
+			(xy 105.41 35.56) (xy 115.57 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "674bf656-9bcf-42f7-8b80-cdfeb1a78897")
+	)
+	(wire
+		(pts
+			(xy 85.09 77.47) (xy 83.82 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68022a54-db24-47d9-be63-2343f3aec1f6")
+	)
+	(wire
+		(pts
+			(xy 74.93 71.12) (xy 85.09 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "685efa47-3567-49cf-9799-dabce435b846")
+	)
+	(wire
+		(pts
+			(xy 105.41 86.36) (xy 104.14 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "694a6571-18b9-467b-ab8c-cfed34436693")
+	)
+	(wire
+		(pts
+			(xy 125.73 88.9) (xy 125.73 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "699f14ac-bec4-4390-bbde-b50805a31197")
+	)
+	(wire
+		(pts
+			(xy 96.52 104.14) (xy 96.52 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a1d7d54-6aa1-45d3-b8fc-de45572424f2")
+	)
+	(wire
+		(pts
+			(xy 74.93 88.9) (xy 85.09 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a203b60-42b4-4876-9fdd-8e323bea1d34")
+	)
+	(wire
+		(pts
+			(xy 135.89 62.23) (xy 135.89 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a90a5bc-4a4b-46e1-9ee5-bace1c426f18")
+	)
+	(wire
+		(pts
+			(xy 105.41 80.01) (xy 115.57 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b5b1899-df6b-4964-8093-beaa3842f5bb")
+	)
+	(wire
+		(pts
+			(xy 115.57 50.8) (xy 114.3 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6b5c3cde-8f53-4639-b0b6-78cad361cfbb")
+	)
+	(wire
+		(pts
+			(xy 85.09 53.34) (xy 85.09 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c338a58-cb2a-43d6-ac60-6c88775f785d")
+	)
+	(wire
+		(pts
+			(xy 125.73 44.45) (xy 125.73 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c471b05-5e44-4741-a5cf-764a67986c4c")
+	)
+	(wire
+		(pts
+			(xy 115.57 77.47) (xy 114.3 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6cb91310-dd7e-4593-b145-26d398241120")
+	)
+	(wire
+		(pts
+			(xy 127 59.69) (xy 127 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6cbc9b6f-90eb-47d0-bf4f-9d36aefb30f0")
+	)
+	(wire
+		(pts
+			(xy 116.84 59.69) (xy 116.84 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d4a5456-ba78-427b-9f01-583b0b16f364")
+	)
+	(wire
+		(pts
+			(xy 76.2 86.36) (xy 76.2 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d81c675-fc79-459f-8236-6f42983dd72f")
+	)
+	(wire
+		(pts
+			(xy 116.84 50.8) (xy 116.84 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7214ab35-73cc-4e89-a2c1-0ee24d83e348")
+	)
+	(wire
+		(pts
+			(xy 76.2 104.14) (xy 76.2 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7257dacc-443b-481f-b8a2-e210e83631e0")
+	)
+	(wire
+		(pts
+			(xy 85.09 53.34) (xy 95.25 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74d4728b-9434-40ac-aba0-68cbf84dd7b3")
+	)
+	(wire
+		(pts
+			(xy 95.25 62.23) (xy 95.25 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "75f488f1-2df1-45dc-959e-7293160aad10")
+	)
+	(wire
+		(pts
+			(xy 134.62 41.91) (xy 135.89 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77a8b478-e2d5-439e-8555-520ecfe70c4e")
+	)
+	(wire
+		(pts
+			(xy 135.89 44.45) (xy 135.89 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "77cab829-5904-4eb8-801a-5d8f22ba0132")
+	)
+	(wire
+		(pts
+			(xy 134.62 77.47) (xy 135.89 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "78660431-1fd6-49c3-8669-52cb1d12512d")
+	)
+	(wire
+		(pts
+			(xy 134.62 104.14) (xy 135.89 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7a72076d-561a-495b-9f2a-54c8145c80ba")
+	)
+	(wire
+		(pts
+			(xy 63.5 86.36) (xy 64.77 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7befdf12-e3ea-480b-bc2b-2d9b111db4f8")
+	)
+	(wire
+		(pts
+			(xy 106.68 50.8) (xy 106.68 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c2f6c9e-9798-450b-a639-4e8648c88c7b")
+	)
+	(wire
+		(pts
+			(xy 105.41 62.23) (xy 115.57 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ca283ba-ca24-4d64-b84e-c9b9317d2a24")
+	)
+	(wire
+		(pts
+			(xy 127 77.47) (xy 127 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7cafe401-730a-4a41-99ca-bf57af355db3")
+	)
+	(wire
+		(pts
+			(xy 115.57 97.79) (xy 115.57 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d442700-cce6-46af-80d6-2213c72e9f4e")
+	)
+	(wire
+		(pts
+			(xy 106.68 77.47) (xy 106.68 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7dd42ce3-3acd-4a5e-9ab4-b98cbb7c07ff")
+	)
+	(wire
+		(pts
+			(xy 127 104.14) (xy 127 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7dea1f14-6efd-43df-b14a-908455cbe4d9")
+	)
+	(wire
+		(pts
+			(xy 105.41 62.23) (xy 105.41 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ee14057-187d-4ed2-bf6e-13b483b181d6")
+	)
+	(wire
+		(pts
+			(xy 115.57 80.01) (xy 115.57 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f3f9fd2-154c-450f-b5b0-f69c03f29226")
+	)
+	(wire
+		(pts
+			(xy 64.77 50.8) (xy 64.77 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8094c6b5-4356-4546-95ee-c331fb4254e2")
+	)
+	(wire
+		(pts
+			(xy 85.09 97.79) (xy 95.25 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82dbd774-bd58-46b8-91ac-3b195356c81a")
+	)
+	(wire
+		(pts
+			(xy 63.5 77.47) (xy 64.77 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "837aee66-9fec-4afe-a0db-475b64174365")
+	)
+	(wire
+		(pts
+			(xy 64.77 88.9) (xy 74.93 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83f4f506-f718-4ea8-9ed0-4d7de3e31fe7")
+	)
+	(wire
+		(pts
+			(xy 95.25 59.69) (xy 93.98 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "843c4d8f-7519-4f65-8872-2974c36105b3")
+	)
+	(wire
+		(pts
+			(xy 63.5 104.14) (xy 64.77 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84b18eb9-b335-4229-b845-36ccbae80c85")
+	)
+	(wire
+		(pts
+			(xy 125.73 50.8) (xy 124.46 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8570441b-7d5d-4df7-9e3e-198b74faf236")
+	)
+	(wire
+		(pts
+			(xy 95.25 77.47) (xy 93.98 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "883129e1-2826-4086-8f49-61821ec99802")
+	)
+	(wire
+		(pts
+			(xy 66.04 59.69) (xy 66.04 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8909a79a-aa33-454d-816a-b2b7e4efa748")
+	)
+	(wire
+		(pts
+			(xy 115.57 44.45) (xy 125.73 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b88b44a-2d91-48d4-8746-d46d072810c3")
+	)
+	(wire
+		(pts
+			(xy 76.2 95.25) (xy 76.2 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8bfd3087-483b-474f-a20e-6dfcb0a82e57")
+	)
+	(wire
+		(pts
+			(xy 125.73 71.12) (xy 135.89 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8cc48e3e-ebbd-4973-9aab-c1ac8fccdad5")
+	)
+	(wire
+		(pts
+			(xy 86.36 50.8) (xy 86.36 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fad4576-a8fc-4dde-8087-fea5cc74df75")
+	)
+	(wire
+		(pts
+			(xy 116.84 86.36) (xy 116.84 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90dfbe26-c229-4031-b779-b2fd601a05bd")
+	)
+	(wire
+		(pts
+			(xy 74.93 35.56) (xy 74.93 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "916827b5-2b34-4779-9046-0e27a2a3571a")
+	)
+	(wire
+		(pts
+			(xy 106.68 41.91) (xy 106.68 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91b9bf01-c351-4072-b06b-b89e453a81b3")
+	)
+	(wire
+		(pts
+			(xy 115.57 59.69) (xy 114.3 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91de8bdd-e075-47d9-883e-edb6054ad90c")
+	)
+	(wire
+		(pts
+			(xy 125.73 59.69) (xy 124.46 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "92c6340e-622d-4a45-8e72-1ab17f005661")
+	)
+	(wire
+		(pts
+			(xy 63.5 95.25) (xy 64.77 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95aa7cb5-e3c6-4897-90d3-929a3d174646")
+	)
+	(wire
+		(pts
+			(xy 63.5 50.8) (xy 64.77 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98146191-3232-4463-be85-2d1992a11199")
+	)
+	(wire
+		(pts
+			(xy 74.93 97.79) (xy 85.09 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "983e2680-3073-429e-8c30-193ecbd5c85a")
+	)
+	(wire
+		(pts
+			(xy 115.57 95.25) (xy 114.3 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9921f6aa-5abc-45e5-b451-5143e80525c7")
+	)
+	(wire
+		(pts
+			(xy 55.88 77.47) (xy 55.88 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9bf0c371-c8e3-4477-8fb0-3ba4d62b20c1")
+	)
+	(wire
+		(pts
+			(xy 127 50.8) (xy 127 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f4cce4a-104d-45c7-8397-5876703702c3")
+	)
+	(wire
+		(pts
+			(xy 125.73 80.01) (xy 125.73 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a21b8167-53e8-4c19-8e41-fb102f13a70c")
+	)
+	(wire
+		(pts
+			(xy 125.73 44.45) (xy 135.89 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a316406b-4b7a-48a1-bd5e-0df7666c12f2")
+	)
+	(wire
+		(pts
+			(xy 73.66 50.8) (xy 74.93 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a4549694-7baf-4736-8ab7-3b953402a0bf")
+	)
+	(wire
+		(pts
+			(xy 95.25 35.56) (xy 105.41 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a540dc0f-3f8a-4058-ade0-fb72b213b103")
+	)
+	(wire
+		(pts
+			(xy 127 95.25) (xy 127 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5931478-6e53-4ee3-9c7c-4e63f7651a20")
+	)
+	(wire
+		(pts
+			(xy 134.62 59.69) (xy 135.89 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a6c9b453-3faa-43f9-aa24-2f115b8bed24")
+	)
+	(wire
+		(pts
+			(xy 66.04 95.25) (xy 66.04 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a75176b0-40e1-47a0-9c11-17fb923faea3")
+	)
+	(wire
+		(pts
+			(xy 64.77 53.34) (xy 74.93 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8a673aa-22d0-461b-89cb-f430203ed9e9")
+	)
+	(wire
+		(pts
+			(xy 86.36 41.91) (xy 86.36 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa098a1a-c2b4-4a0b-9c71-619af105619c")
+	)
+	(wire
+		(pts
+			(xy 96.52 41.91) (xy 96.52 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aaf82878-35e0-45f5-bc21-350b35d63f78")
+	)
+	(wire
+		(pts
+			(xy 76.2 68.58) (xy 76.2 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab460796-6d17-4e56-8f89-ddb456980f58")
+	)
+	(wire
+		(pts
+			(xy 85.09 80.01) (xy 95.25 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab9fc264-1c42-4338-97f7-313d98f762be")
+	)
+	(wire
+		(pts
+			(xy 115.57 35.56) (xy 115.57 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "abdea941-24cb-44b1-843e-26b5c7c2266b")
+	)
+	(wire
+		(pts
+			(xy 74.93 88.9) (xy 74.93 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac8feb1a-ea6a-4974-9fed-c9b7f72f0448")
+	)
+	(wire
+		(pts
+			(xy 63.5 68.58) (xy 64.77 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "acb53e84-584f-4d47-a3e5-88cc943313a5")
+	)
+	(wire
+		(pts
+			(xy 95.25 104.14) (xy 93.98 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "adaf0ce1-da64-46b7-a13b-1b72e972e003")
+	)
+	(wire
+		(pts
+			(xy 135.89 97.79) (xy 135.89 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae5df450-08a3-4134-b128-9534a9daa6a2")
+	)
+	(wire
+		(pts
+			(xy 135.89 35.56) (xy 135.89 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0ef772d-b6b8-4747-9a9e-d48bbc34227b")
+	)
+	(wire
+		(pts
+			(xy 64.77 97.79) (xy 74.93 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b16014ef-cdb3-4fad-abd1-f008967092bd")
+	)
+	(wire
+		(pts
+			(xy 125.73 35.56) (xy 135.89 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1ce4565-e539-43bf-b9c8-62c9d68d4f73")
+	)
+	(wire
+		(pts
+			(xy 105.41 44.45) (xy 105.41 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b22e4de8-6d9b-433f-a072-fb3dc6d4d1ae")
+	)
+	(wire
+		(pts
+			(xy 125.73 97.79) (xy 135.89 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b25ec552-ab4b-459a-b9d0-34b60a6fa48c")
+	)
+	(wire
+		(pts
+			(xy 86.36 95.25) (xy 86.36 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3066960-b64e-4b40-a575-4aa7a2395a85")
+	)
+	(wire
+		(pts
+			(xy 125.73 62.23) (xy 135.89 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b42d24cf-2140-42e5-8c4c-049bc2ff6bcd")
+	)
+	(wire
+		(pts
+			(xy 125.73 53.34) (xy 125.73 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6d1e2b6-ba68-4a77-98e9-a5537886bd75")
+	)
+	(wire
+		(pts
+			(xy 106.68 95.25) (xy 106.68 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b99ecae0-0f16-45ef-bac4-ffde7ff51f60")
+	)
+	(wire
+		(pts
+			(xy 55.88 41.91) (xy 55.88 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "babbee15-65ea-49bb-9952-16697ac5a3dc")
+	)
+	(wire
+		(pts
+			(xy 74.93 35.56) (xy 85.09 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbccc887-ac62-4dc2-9d12-578da7644d24")
+	)
+	(wire
+		(pts
+			(xy 127 86.36) (xy 127 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bbf19cf5-1d85-4cfe-be97-f470489684d9")
+	)
+	(wire
+		(pts
+			(xy 64.77 35.56) (xy 74.93 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bde6f967-c34e-4b28-bc4a-5d9924ff2863")
+	)
+	(wire
+		(pts
+			(xy 96.52 59.69) (xy 96.52 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1575b0d-b9db-4f3e-b241-1eb63875293f")
+	)
+	(wire
+		(pts
+			(xy 64.77 71.12) (xy 74.93 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c21650f5-f396-42f5-965e-4fe3da2efae7")
+	)
+	(wire
+		(pts
+			(xy 95.25 95.25) (xy 93.98 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c33bd6b5-9a59-436c-bb0f-4c38508f9447")
+	)
+	(wire
+		(pts
+			(xy 73.66 59.69) (xy 74.93 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4294f8b-fb68-4994-82cf-603dd491642d")
+	)
+	(wire
+		(pts
+			(xy 85.09 71.12) (xy 85.09 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c4a5b369-a68e-4358-9797-481474c7ac72")
+	)
+	(wire
+		(pts
+			(xy 85.09 104.14) (xy 83.82 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c502a9f7-4142-4e1f-ab4b-544a0c3e1487")
+	)
+	(wire
+		(pts
+			(xy 76.2 77.47) (xy 76.2 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5b93aca-82fe-49a5-8d2a-d15b7cacccae")
+	)
+	(wire
+		(pts
+			(xy 134.62 68.58) (xy 135.89 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6ca15dc-9f6c-4d1b-ac01-34cdb324d22d")
+	)
+	(wire
+		(pts
+			(xy 105.41 88.9) (xy 115.57 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c91a5e01-05e3-4a6a-8b33-452184553630")
+	)
+	(wire
+		(pts
+			(xy 125.73 95.25) (xy 124.46 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c9e98cc4-fcb1-491c-9b56-17d50bdc1e20")
+	)
+	(wire
+		(pts
+			(xy 64.77 95.25) (xy 64.77 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca930d4b-6cc7-49b4-86e2-b013bd4afd0b")
+	)
+	(wire
+		(pts
+			(xy 116.84 68.58) (xy 116.84 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "caecfd2b-a588-471a-b189-fb007b5a378e")
+	)
+	(wire
+		(pts
+			(xy 66.04 41.91) (xy 66.04 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb0c4875-a6e8-4810-9a1d-556f8f02cd22")
+	)
+	(wire
+		(pts
+			(xy 115.57 104.14) (xy 114.3 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb5d7c22-9bb7-4e40-9374-978ff91a7cac")
+	)
+	(wire
+		(pts
+			(xy 106.68 86.36) (xy 106.68 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb85c3e0-9cf7-4c49-b60a-b922af509ec6")
+	)
+	(wire
+		(pts
+			(xy 85.09 80.01) (xy 85.09 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cbbe1d75-770f-466d-b468-a6ed9d271c87")
+	)
+	(wire
+		(pts
+			(xy 95.25 86.36) (xy 93.98 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd139a81-4086-4a9e-b319-587850f13f6c")
+	)
+	(wire
+		(pts
+			(xy 74.93 62.23) (xy 74.93 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce2b0e35-b820-45fd-aea8-31f0be86ad15")
+	)
+	(wire
+		(pts
+			(xy 85.09 88.9) (xy 85.09 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce72d765-39cb-42d2-8f60-a04b9e225ab7")
+	)
+	(wire
+		(pts
+			(xy 105.41 68.58) (xy 104.14 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d013fed2-dac7-42c5-95c9-89d833565af7")
+	)
+	(wire
+		(pts
+			(xy 55.88 68.58) (xy 55.88 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d473777e-cbfc-48d1-9f44-7879eefcc6b2")
+	)
+	(wire
+		(pts
+			(xy 73.66 95.25) (xy 74.93 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d612c554-bfee-4e83-9fee-ee3cf4dea86d")
+	)
+	(wire
+		(pts
+			(xy 64.77 41.91) (xy 64.77 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d74f6deb-fb14-4a2a-9103-d6271c60c7a8")
+	)
+	(wire
+		(pts
+			(xy 115.57 88.9) (xy 125.73 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7be282c-3b90-4c8a-8e0c-e259574be69a")
+	)
+	(wire
+		(pts
+			(xy 64.77 77.47) (xy 64.77 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8088cfd-9b82-4975-ab5c-ef48b5a5dbd5")
+	)
+	(wire
+		(pts
+			(xy 73.66 77.47) (xy 74.93 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8b44e14-cff0-4576-943f-d0ba19c845aa")
+	)
+	(wire
+		(pts
+			(xy 125.73 80.01) (xy 135.89 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d97c386d-63e2-4e5f-a405-762cb12c64a3")
+	)
+	(wire
+		(pts
+			(xy 125.73 35.56) (xy 125.73 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da9caf13-c260-464e-aa04-cecfd361a3e9")
+	)
+	(wire
+		(pts
+			(xy 125.73 86.36) (xy 124.46 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dc308364-14db-4877-9106-154217375530")
+	)
+	(wire
+		(pts
+			(xy 64.77 62.23) (xy 74.93 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de0dbd60-ebd0-4c55-8b55-1aeab85703e9")
+	)
+	(wire
+		(pts
+			(xy 64.77 80.01) (xy 74.93 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de3a47e4-5f5f-4c59-9666-c65ada2be027")
+	)
+	(wire
+		(pts
+			(xy 105.41 71.12) (xy 115.57 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de655116-1264-4602-bc58-e2e0de44f4d9")
+	)
+	(wire
+		(pts
+			(xy 85.09 71.12) (xy 95.25 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de69cf5e-6e76-4107-b4ee-eb4fd12c9f4b")
+	)
+	(wire
+		(pts
+			(xy 95.25 68.58) (xy 93.98 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dff8ea35-2e4c-466a-8b7a-41e8cf4753fb")
+	)
+	(wire
+		(pts
+			(xy 63.5 41.91) (xy 64.77 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e21b1ada-6a75-4343-9174-b861cf7d94be")
+	)
+	(wire
+		(pts
+			(xy 95.25 71.12) (xy 95.25 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2271410-a44e-44f6-840d-966855604d71")
+	)
+	(wire
+		(pts
+			(xy 85.09 68.58) (xy 83.82 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2411675-8244-49a6-b22e-16dbeba07924")
+	)
+	(wire
+		(pts
+			(xy 105.41 97.79) (xy 115.57 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2a5636c-8a7e-4245-a32b-b3d8e008d965")
+	)
+	(wire
+		(pts
+			(xy 74.93 97.79) (xy 74.93 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2b67b37-0c47-464c-b4ff-7c6e0a198f3d")
+	)
+	(wire
+		(pts
+			(xy 73.66 68.58) (xy 74.93 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3043de9-7660-4876-ac85-cf113b5ba85f")
+	)
+	(wire
+		(pts
+			(xy 66.04 77.47) (xy 66.04 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e359b327-d402-4c26-b07d-a67967d3e0c2")
+	)
+	(wire
+		(pts
+			(xy 95.25 44.45) (xy 105.41 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3c402b3-61fb-413f-9fd0-1c9448915a62")
+	)
+	(wire
+		(pts
+			(xy 74.93 80.01) (xy 85.09 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e457e2cb-f346-404b-9fd5-119f49eb5610")
+	)
+	(wire
+		(pts
+			(xy 85.09 44.45) (xy 95.25 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5af0a8e-2b42-4ad9-9b7e-d92f8dfcfee3")
+	)
+	(wire
+		(pts
+			(xy 64.77 104.14) (xy 64.77 97.79)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e61c6e04-294d-485a-9150-b0bb888655e3")
+	)
+	(wire
+		(pts
+			(xy 95.25 88.9) (xy 105.41 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e792b38a-5b92-48a2-b8cf-b933e3e91498")
+	)
+	(wire
+		(pts
+			(xy 74.93 44.45) (xy 74.93 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9616b74-edde-4980-b6d7-1de3dd58ae3d")
+	)
+	(wire
+		(pts
+			(xy 85.09 95.25) (xy 83.82 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea1645ad-30ce-42c0-8a22-41c18473e2c1")
+	)
+	(wire
+		(pts
+			(xy 95.25 44.45) (xy 95.25 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee052a99-166e-4caf-93a5-54e900f6dbda")
+	)
+	(wire
+		(pts
+			(xy 95.25 62.23) (xy 105.41 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee09a3bc-08f2-458f-af5b-4b44d0703345")
+	)
+	(wire
+		(pts
+			(xy 125.73 53.34) (xy 135.89 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee70caf5-be53-4436-8783-d36414b976a4")
+	)
+	(wire
+		(pts
+			(xy 115.57 62.23) (xy 115.57 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee748db0-73a3-44ea-86e0-3c02d7653112")
+	)
+	(wire
+		(pts
+			(xy 55.88 50.8) (xy 55.88 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eea621a0-0520-4743-a1a7-13ccfff440c6")
+	)
+	(wire
+		(pts
+			(xy 135.89 71.12) (xy 135.89 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ef911376-858e-468b-abd9-aa2337f39613")
+	)
+	(wire
+		(pts
+			(xy 134.62 95.25) (xy 135.89 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eff3af41-a278-407d-aa1f-d7d8667e246a")
+	)
+	(wire
+		(pts
+			(xy 116.84 104.14) (xy 116.84 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f0eb40a2-2aab-49c2-b210-9194ab01b004")
+	)
+	(wire
+		(pts
+			(xy 73.66 41.91) (xy 74.93 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1c3416f-f30b-4896-8341-8665bc5a2248")
+	)
+	(wire
+		(pts
+			(xy 74.93 71.12) (xy 74.93 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2482e7d-d1fe-43e9-9d86-f109d28eed51")
+	)
+	(wire
+		(pts
+			(xy 86.36 77.47) (xy 86.36 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f34328b8-99cd-474b-839a-fa31d53ae6fc")
+	)
+	(wire
+		(pts
+			(xy 95.25 88.9) (xy 95.25 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f5197799-bc6b-44e5-9a16-bfe4f16f581c")
+	)
+	(wire
+		(pts
+			(xy 115.57 53.34) (xy 115.57 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f73fc190-6675-4d44-abbc-8da98a428388")
+	)
+	(wire
+		(pts
+			(xy 125.73 97.79) (xy 125.73 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f78c178f-1d8f-4c4e-a024-f319c635e5db")
+	)
+	(wire
+		(pts
+			(xy 85.09 35.56) (xy 85.09 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7f8a956-169b-4a80-8784-0988aaf585e8")
+	)
+	(wire
+		(pts
+			(xy 105.41 80.01) (xy 105.41 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa6f8cb2-3539-450a-b9d3-65dbb00f226e")
+	)
+	(wire
+		(pts
+			(xy 85.09 44.45) (xy 85.09 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcb275b6-e107-4c4e-bfc7-8b3df124411e")
+	)
+	(wire
+		(pts
+			(xy 115.57 86.36) (xy 114.3 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ff85bd66-8299-4d2e-9f64-a3052cc1b078")
+	)
+	(wire
+		(pts
+			(xy 115.57 53.34) (xy 125.73 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ffa214d7-798f-4723-92bb-a6973a82c36e")
+	)
+	(wire
+		(pts
+			(xy 95.25 53.34) (xy 105.41 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ffa74af8-e88d-4752-883a-f1dedead0268")
+	)
+	(label "Row5"
+		(at 135.89 73.66 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "04f194da-6137-47c6-bdfa-1216f0158a53")
+	)
+	(label "Row8"
+		(at 135.89 100.33 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "0f6451d1-7d8e-4eda-bee6-23209560a084")
+	)
+	(label "Col5"
+		(at 96.52 107.95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "10a4d130-00a9-4fad-9ebc-4bf78a7e65d4")
+	)
+	(label "Col4"
+		(at 86.36 107.95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "27876df3-f8fa-43de-bdfc-1b01bc9f7e83")
+	)
+	(label "Col2"
+		(at 66.04 107.95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "28e50865-00fb-4d30-94bc-ee9fa01e2815")
+	)
+	(label "Col3"
+		(at 76.2 107.95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2fabdb13-71c3-4778-a483-d8bc98317b61")
+	)
+	(label "Row4"
+		(at 135.89 64.77 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "58b7fe5b-6e38-40d1-8f46-292a878d8992")
+	)
+	(label "Row1"
+		(at 135.89 38.1 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6a40b0a6-406e-40a1-b4cc-ef2321a89578")
+	)
+	(label "Row7"
+		(at 135.89 91.44 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a1783c71-965d-43a8-a3e7-39c0835d3ff6")
+	)
+	(label "Col7"
+		(at 116.84 107.95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bf469fd1-8079-45df-abb0-3a43c603d9ce")
+	)
+	(label "Col1"
+		(at 55.88 107.95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c69056ce-03a3-40f7-9e18-1243e9951b66")
+	)
+	(label "Col6"
+		(at 106.68 107.95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d0f7c98f-ca62-45d3-be69-db2f8d8c2c3e")
+	)
+	(label "Col8"
+		(at 127 107.95 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "da744a5f-d25a-4e75-acab-c5952ebacd0d")
+	)
+	(label "Row6"
+		(at 135.89 82.55 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dc4b3ba4-eae2-4cdd-b6cb-be32c818dfbc")
+	)
+	(label "Row2"
+		(at 135.89 46.99 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e2c6b029-0532-4968-a1a4-382151cd2df5")
+	)
+	(label "Row3"
+		(at 135.89 55.88 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ee9ca3f7-7ce6-4557-a2c4-d29e5c370a47")
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 120.65 86.36 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0231e8e1-1738-4660-b596-597755d78060")
+		(property "Reference" "D47"
+			(at 122.2375 81.1911 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 122.2375 83.1121 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 120.65 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 120.65 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 120.65 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 120.65 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 120.65 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3dac1586-ebb8-4228-aa4c-d8bb71882902")
+		)
+		(pin "2"
+			(uuid "417aa8d2-fb16-4d68-a4d6-cdd6df2416d0")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D47")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 120.65 68.58 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "03a736ed-7598-4807-b419-f46bfe038cf0")
+		(property "Reference" "D31"
+			(at 122.2375 63.4111 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 122.2375 65.3321 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 120.65 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 120.65 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 120.65 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 120.65 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 120.65 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ec26f0c3-6734-4b2b-a13f-9853c3b3c478")
+		)
+		(pin "2"
+			(uuid "f26395d6-3ff3-4a02-ba31-7530064536f3")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D31")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 100.33 86.36 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0666e70f-f55e-4389-ab30-de9aaec237b6")
+		(property "Reference" "D45"
+			(at 101.9175 81.1911 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 101.9175 83.1121 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 100.33 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 100.33 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 100.33 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 100.33 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bea0fb29-eb35-461a-9272-4c90d08272af")
+		)
+		(pin "2"
+			(uuid "1e5f8e01-618f-41ac-b7c2-8c1579a6e00e")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D45")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 100.33 77.47 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0c604ea7-8d83-4466-81e7-97182d0848ab")
+		(property "Reference" "D37"
+			(at 101.9175 72.3011 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 101.9175 74.2221 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 100.33 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 100.33 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 100.33 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 100.33 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "32f3c201-7e2c-45c2-a1f3-8973eb7eab16")
+		)
+		(pin "2"
+			(uuid "8e49d4bc-15f7-4b6e-8989-0efc53c6cb2d")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D37")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 100.33 50.8 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1c77c890-8405-42c8-a7c9-6bbc72158086")
+		(property "Reference" "D13"
+			(at 101.9175 45.6311 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 101.9175 47.5521 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 100.33 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 100.33 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 100.33 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 100.33 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2d43b29b-70a3-4efb-b73d-3dd70d715cbe")
+		)
+		(pin "2"
+			(uuid "6a340faf-cca1-4d52-b9b4-50eb67af3637")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 130.81 104.14 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1ee7771e-b68d-4c86-b3e8-193b449895de")
+		(property "Reference" "D64"
+			(at 132.3975 98.9711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 132.3975 100.8921 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 130.81 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 130.81 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 130.81 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 130.81 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 130.81 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "10604522-5c1b-479f-8146-1956b61a2fda")
+		)
+		(pin "2"
+			(uuid "51826bd0-b05f-42f2-ae95-27483787c2a7")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D64")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 59.69 77.47 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "23149997-0407-4f4a-862c-abceac012236")
+		(property "Reference" "D33"
+			(at 61.2775 72.3011 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 61.2775 74.2221 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 59.69 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 59.69 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 59.69 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 59.69 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6c2d1ad9-43a9-4c14-8588-9111e1bbfe35")
+		)
+		(pin "2"
+			(uuid "597e3a82-29bd-4684-b2aa-c37960f70cb6")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D33")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 110.49 59.69 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "26ca9d89-5156-4a8e-a5c0-bcf4b422efba")
+		(property "Reference" "D22"
+			(at 112.0775 54.5211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 112.0775 56.4421 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 110.49 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 110.49 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 110.49 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 110.49 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 110.49 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e8d9c06d-a8a0-4463-857e-41a5407a72c7")
+		)
+		(pin "2"
+			(uuid "8d521c9c-d125-4b07-8ae1-b435e88c6935")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D22")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 110.49 68.58 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "32405f69-4e64-4c6e-8af9-24ffb55a9c47")
+		(property "Reference" "D30"
+			(at 112.0775 63.4111 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 112.0775 65.3321 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 110.49 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 110.49 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 110.49 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 110.49 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 110.49 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b5a6010f-498d-4df4-bf39-51616d167b8c")
+		)
+		(pin "2"
+			(uuid "33b25e03-edb0-4138-b2db-89d139fd86ba")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D30")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 120.65 41.91 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "33be5aed-98e3-4768-a5bb-cf6dd4d56b51")
+		(property "Reference" "D7"
+			(at 122.2375 36.7411 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 122.2375 38.6621 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 120.65 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 120.65 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 120.65 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 120.65 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 120.65 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1a8b4410-8b38-4e6f-baf2-c80ea54c7e7e")
+		)
+		(pin "2"
+			(uuid "63b73a8e-93f7-4cdf-b108-89ae3685a9c1")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 110.49 41.91 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3459f56d-2503-48f8-ae8c-6f44aa5542ca")
+		(property "Reference" "D6"
+			(at 112.0775 36.7411 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 112.0775 38.6621 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 110.49 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 110.49 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 110.49 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 110.49 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 110.49 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a50a8684-4b06-4a34-9b37-d8c25b044064")
+		)
+		(pin "2"
+			(uuid "90301099-0902-48f1-bbed-44045ac538e3")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 69.85 68.58 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3700f2ee-c9d2-4942-a30b-410f017ddd52")
+		(property "Reference" "D26"
+			(at 71.4375 63.4111 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 71.4375 65.3321 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 69.85 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 69.85 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 69.85 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 69.85 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 69.85 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e25a96a0-a3a5-417a-a8a1-fbcabc7d7666")
+		)
+		(pin "2"
+			(uuid "995632b8-ecf9-4c7b-96b1-ee2f6b8df3f4")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 90.17 86.36 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3d40683d-3e17-45c2-baf6-7231a4f83516")
+		(property "Reference" "D44"
+			(at 91.7575 81.1911 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 91.7575 83.1121 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 90.17 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 90.17 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 90.17 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 90.17 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "87eeb048-ba89-426c-bb02-e4da970cc8be")
+		)
+		(pin "2"
+			(uuid "7593dacd-d185-4f02-9a9e-a06b811f4304")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D44")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 110.49 86.36 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3d41394d-3cc9-46e4-8735-7e7afd975fa0")
+		(property "Reference" "D46"
+			(at 112.0775 81.1911 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 112.0775 83.1121 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 110.49 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 110.49 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 110.49 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 110.49 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 110.49 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ba9bd08f-8616-4f02-b86b-a8d778f4eff1")
+		)
+		(pin "2"
+			(uuid "5d7803d4-9216-4b78-98ea-1ddffe8ff81d")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D46")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 100.33 59.69 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "403e3b2f-b1b9-4e3e-b174-168b15a8611e")
+		(property "Reference" "D21"
+			(at 101.9175 54.5211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 101.9175 56.4421 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 100.33 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 100.33 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 100.33 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 100.33 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2659bc98-4ab8-4d78-9222-c1639c2e8a33")
+		)
+		(pin "2"
+			(uuid "03bb10ea-d5e2-41a5-aea1-53bba2862ff4")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 69.85 86.36 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "46b4da64-edc3-47ce-b727-bba6b359e64d")
+		(property "Reference" "D42"
+			(at 71.4375 81.1911 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 71.4375 83.1121 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 69.85 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 69.85 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 69.85 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 69.85 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 69.85 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a6ccdabf-306e-4762-a77c-2a86cc2e8087")
+		)
+		(pin "2"
+			(uuid "7603812b-f8e5-4937-bf47-47e10eff03f1")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D42")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 90.17 104.14 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "498f5439-032b-45ef-ab40-98e1dc55c5ac")
+		(property "Reference" "D60"
+			(at 91.7575 98.9711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 91.7575 100.8921 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 90.17 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 90.17 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 90.17 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 90.17 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "395b976c-cbaf-4292-80be-8121f66522a3")
+		)
+		(pin "2"
+			(uuid "688678c7-6f54-4ed6-b460-5dedd13ee12c")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D60")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 59.69 50.8 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "54539067-a164-47f4-ad32-788b4a0cf689")
+		(property "Reference" "D9"
+			(at 61.2775 45.6311 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 61.2775 47.5521 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 59.69 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 59.69 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 59.69 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 59.69 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f5555680-a88a-4406-b50c-4a9e8766fb6c")
+		)
+		(pin "2"
+			(uuid "cb5416af-234a-49a9-bb38-a09cd52b6d3c")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D9")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 69.85 59.69 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "56789f40-466c-47e5-9326-de31d7ee5baa")
+		(property "Reference" "D18"
+			(at 71.4375 54.5211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 71.4375 56.4421 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 69.85 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 69.85 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 69.85 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 69.85 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 69.85 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "55704572-1009-4521-ab15-347380dd94e2")
+		)
+		(pin "2"
+			(uuid "3ae2454a-ce49-4811-a9fd-de7b871da632")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 130.81 68.58 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "56c6ae07-093c-4122-887a-fb54c1e956f6")
+		(property "Reference" "D32"
+			(at 132.3975 63.4111 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 132.3975 65.3321 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 130.81 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 130.81 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 130.81 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 130.81 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 130.81 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c4c33da7-250a-444e-99bc-b39d4aab0b30")
+		)
+		(pin "2"
+			(uuid "d9ac91ff-488d-4d71-9b35-2b4d5829351b")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 110.49 77.47 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "61fb080a-628c-4411-9ebb-4db0841228ca")
+		(property "Reference" "D38"
+			(at 112.0775 72.3011 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 112.0775 74.2221 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 110.49 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 110.49 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 110.49 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 110.49 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 110.49 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5768c50a-7953-4ca8-97b4-d9d0f8af801c")
+		)
+		(pin "2"
+			(uuid "cd827f64-8707-4b10-a8bb-557a0312b3b6")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D38")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 69.85 95.25 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "63fbd317-e15f-47da-95a7-7cac943c3aab")
+		(property "Reference" "D50"
+			(at 71.4375 90.0811 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 71.4375 92.0021 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 69.85 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 69.85 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 69.85 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 69.85 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 69.85 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "33602795-99f4-404e-8643-1f48a8e3e05e")
+		)
+		(pin "2"
+			(uuid "03178242-b109-4bed-9e41-3a775161f7e6")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D50")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 120.65 50.8 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6513f96a-8bbe-4354-870d-c0bd57e43417")
+		(property "Reference" "D15"
+			(at 122.2375 45.6311 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 122.2375 47.5521 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 120.65 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 120.65 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 120.65 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 120.65 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 120.65 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "800c9d25-c158-44d1-a2ef-6453d2a9612e")
+		)
+		(pin "2"
+			(uuid "1cb89413-9ca0-41d7-b210-2cb69a01c6bf")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 80.01 95.25 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "65d05fcb-c762-4325-88b4-3c1c5f3ae141")
+		(property "Reference" "D51"
+			(at 81.5975 90.0811 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 81.5975 92.0021 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 80.01 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 80.01 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 80.01 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 80.01 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5163709e-d335-410d-8f41-b807549fc2b1")
+		)
+		(pin "2"
+			(uuid "6e283184-2345-4027-8737-f38158fc3d6b")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D51")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 80.01 104.14 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "73d21688-d372-4a71-ae54-e548a171f918")
+		(property "Reference" "D59"
+			(at 81.5975 98.9711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 81.5975 100.8921 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 80.01 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 80.01 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 80.01 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 80.01 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "005c1f59-10cc-4e1d-9936-972f214a4286")
+		)
+		(pin "2"
+			(uuid "0caca086-3020-4f14-8a72-ce848975da8e")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D59")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 90.17 50.8 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7904715e-3ea8-467f-b2c3-e6b46253b2d4")
+		(property "Reference" "D12"
+			(at 91.7575 45.6311 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 91.7575 47.5521 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 90.17 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 90.17 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 90.17 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 90.17 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "66a31c52-7911-47b2-81a8-d069a17fb1cd")
+		)
+		(pin "2"
+			(uuid "93ceb3f5-e7a6-46f8-b48c-193ba74e2b68")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 59.69 95.25 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "79f4cad5-ce17-4526-a486-717c23c94019")
+		(property "Reference" "D49"
+			(at 61.2775 90.0811 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 61.2775 92.0021 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 59.69 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 59.69 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 59.69 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 59.69 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "15a96ab2-1571-40a4-9aa7-e27f406bffff")
+		)
+		(pin "2"
+			(uuid "03973cfe-79c0-4f7e-8557-86961d6436ff")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D49")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 100.33 95.25 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7eadaaf7-5d03-4cfa-9d9e-6e3aa0ab49f7")
+		(property "Reference" "D53"
+			(at 101.9175 90.0811 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 101.9175 92.0021 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 100.33 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 100.33 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 100.33 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 100.33 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d607d272-f25f-4238-8656-e51b17edf015")
+		)
+		(pin "2"
+			(uuid "4ea08cf4-d8b5-412b-9d44-2448fb574a79")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D53")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 100.33 68.58 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "89fe021c-955a-4f13-b699-b75771b23623")
+		(property "Reference" "D29"
+			(at 101.9175 63.4111 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 101.9175 65.3321 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 100.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 100.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 100.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 100.33 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9b9265cf-ad14-4ca0-bace-68b680b03e69")
+		)
+		(pin "2"
+			(uuid "16a8767d-bba3-4e24-ada0-2702a357cbc8")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 59.69 41.91 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8d201171-2789-4ed6-b198-f847af5c0175")
+		(property "Reference" "D1"
+			(at 61.2775 36.7411 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 61.2775 38.6621 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 59.69 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 59.69 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 59.69 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 59.69 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d2d49bf7-8e60-4ad2-8012-2cdd94a2abe1")
+		)
+		(pin "2"
+			(uuid "e54c78ef-977d-4096-b7a2-7698981085f6")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 59.69 68.58 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8e35fb69-a07c-4a7e-971b-407b17ee8d20")
+		(property "Reference" "D25"
+			(at 61.2775 63.4111 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 61.2775 65.3321 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 59.69 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 59.69 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 59.69 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 59.69 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0a6d80d5-bc54-418b-899c-c66a020a7a3a")
+		)
+		(pin "2"
+			(uuid "bcb591c4-cd55-4e34-a2ea-8fe50d72e516")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 110.49 95.25 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8e3dbbab-21eb-44a3-987f-58a8116c0231")
+		(property "Reference" "D54"
+			(at 112.0775 90.0811 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 112.0775 92.0021 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 110.49 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 110.49 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 110.49 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 110.49 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 110.49 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "502126f8-5904-4316-a208-45cc6c3d87dc")
+		)
+		(pin "2"
+			(uuid "e85824ff-7e47-4689-998e-9f69cee9c110")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D54")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 130.81 86.36 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8e81bc78-d733-4229-9ddd-3bb552fb1554")
+		(property "Reference" "D48"
+			(at 132.3975 81.1911 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 132.3975 83.1121 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 130.81 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 130.81 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 130.81 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 130.81 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 130.81 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "27ebbdeb-73eb-407e-8172-0685cc59a709")
+		)
+		(pin "2"
+			(uuid "58be8662-9ade-4293-9055-4a0a6f196430")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D48")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 120.65 59.69 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8fe548aa-1ab6-40ef-95e6-3351b189392e")
+		(property "Reference" "D23"
+			(at 122.2375 54.5211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 122.2375 56.4421 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 120.65 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 120.65 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 120.65 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 120.65 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 120.65 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dab3aa51-c089-41d7-a444-6083493fb6f3")
+		)
+		(pin "2"
+			(uuid "580eb091-71e7-4e08-b8ee-ea265afc06bd")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 59.69 59.69 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "91ac4965-13eb-4c90-a796-63f9301eed33")
+		(property "Reference" "D17"
+			(at 61.2775 54.5211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 61.2775 56.4421 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 59.69 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 59.69 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 59.69 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 59.69 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "901d3d7f-bb4f-4fef-91b7-7a3562bb266c")
+		)
+		(pin "2"
+			(uuid "58dba6ca-005b-45f4-90f1-4483d6789aa5")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 100.33 104.14 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "97efa6e3-6c21-462b-b431-c9a8dd288c44")
+		(property "Reference" "D61"
+			(at 101.9175 98.9711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 101.9175 100.8921 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 100.33 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 100.33 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 100.33 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 100.33 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5cf1a4e4-5d07-4ada-b542-f2637dfd4dba")
+		)
+		(pin "2"
+			(uuid "ad8a4e76-7cf9-47e2-b167-6823e2bbfe4f")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D61")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 130.81 41.91 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9c6ccd5c-f6b5-4f19-ab1d-61fdc14d73bd")
+		(property "Reference" "D8"
+			(at 132.3975 36.7411 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 132.3975 38.6621 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 130.81 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 130.81 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 130.81 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 130.81 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 130.81 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "89bd90cc-b385-4b65-9371-101b74bd0655")
+		)
+		(pin "2"
+			(uuid "56e1b284-80be-4cef-b2e6-2b161b2d07b3")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 90.17 68.58 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9e36c1ca-9c50-40aa-bb5a-a35990a14fc8")
+		(property "Reference" "D28"
+			(at 91.7575 63.4111 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 91.7575 65.3321 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 90.17 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 90.17 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 90.17 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 90.17 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "70a60eb7-c5fa-41d0-afeb-c7c0c88655e9")
+		)
+		(pin "2"
+			(uuid "ce577294-c6f6-43fa-90cb-d0951b3612e5")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 80.01 59.69 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9f5c8eec-e61d-4841-9a02-afbf3823d836")
+		(property "Reference" "D19"
+			(at 81.5975 54.5211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 81.5975 56.4421 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 80.01 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 80.01 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 80.01 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 80.01 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "56741b73-a4e0-4a05-8e92-634c860ee9a5")
+		)
+		(pin "2"
+			(uuid "0e33cdfb-52ae-4d10-b499-bbe6dbb53002")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D19")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 80.01 68.58 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a0149e9f-2f7c-4d92-8795-9b270c9478de")
+		(property "Reference" "D27"
+			(at 81.5975 63.4111 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 81.5975 65.3321 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 80.01 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 80.01 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 80.01 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 80.01 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fed82f9a-4fee-4b2b-95c2-e33936de7dbf")
+		)
+		(pin "2"
+			(uuid "9cb78b83-aa87-4540-b051-bf8b2ff72753")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D27")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 69.85 50.8 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a4252df6-d9c1-48f0-88f5-99c04d2a0bed")
+		(property "Reference" "D10"
+			(at 71.4375 45.6311 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 71.4375 47.5521 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 69.85 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 69.85 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 69.85 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 69.85 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 69.85 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b5e6d73a-35af-4908-b637-3cb8e9906f60")
+		)
+		(pin "2"
+			(uuid "111f07b3-e446-449c-840a-08d584609679")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 80.01 41.91 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a510bdef-f7c8-4105-9f23-92d53bbef5e6")
+		(property "Reference" "D3"
+			(at 81.5975 36.7411 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 81.5975 38.6621 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 80.01 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 80.01 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 80.01 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 80.01 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e0736c27-b7c6-443c-92d1-fcedcb0dfe4d")
+		)
+		(pin "2"
+			(uuid "6ec43496-c9dc-4146-9118-167b96b00f5e")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 59.69 86.36 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ab391d63-a5c8-40a1-a9bf-5bb8f4978141")
+		(property "Reference" "D41"
+			(at 61.2775 81.1911 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 61.2775 83.1121 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 59.69 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 59.69 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 59.69 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 59.69 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "edc88dbd-76d3-4142-ad99-ad7be47a8be8")
+		)
+		(pin "2"
+			(uuid "adb13998-6157-4e1a-be3f-0faef3dcf150")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D41")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 130.81 50.8 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b145f3ec-c469-4de8-8d98-870f0bfe407a")
+		(property "Reference" "D16"
+			(at 132.3975 45.6311 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 132.3975 47.5521 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 130.81 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 130.81 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 130.81 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 130.81 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 130.81 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "de074e6c-1b9b-4f05-89ec-83b6833cb88a")
+		)
+		(pin "2"
+			(uuid "4fd08ac4-a9bc-4d40-864c-6812a0440483")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 59.69 104.14 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ba2835e0-7bcc-4e35-823a-665d399fa40b")
+		(property "Reference" "D57"
+			(at 61.2775 98.9711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 61.2775 100.8921 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 59.69 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 59.69 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 59.69 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 59.69 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 59.69 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3ee55769-1130-4a33-8dea-4e4d22b65f3b")
+		)
+		(pin "2"
+			(uuid "674ebe38-8a93-44c4-b429-280fa0e3dd3f")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D57")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 90.17 59.69 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ba8b7282-177d-4046-8dc3-624ddb5ad1bc")
+		(property "Reference" "D20"
+			(at 91.7575 54.5211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 91.7575 56.4421 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 90.17 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 90.17 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 90.17 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 90.17 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "63610b80-aea7-4e08-b866-5b1fb64c8306")
+		)
+		(pin "2"
+			(uuid "99fb211a-d14d-42f5-9183-6931be189a21")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 130.81 77.47 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ba8c00da-8d62-4e90-95fd-3fac0b75bfd6")
+		(property "Reference" "D40"
+			(at 132.3975 72.3011 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 132.3975 74.2221 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 130.81 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 130.81 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 130.81 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 130.81 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 130.81 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "38c25a3d-ff7b-4b57-acef-cb862dfc57a2")
+		)
+		(pin "2"
+			(uuid "c479c50c-ae57-45d7-8f50-07a1f252b970")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D40")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 69.85 41.91 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c643c20c-a77f-4cf5-8929-871956b16b5b")
+		(property "Reference" "D2"
+			(at 71.4375 36.7411 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 71.4375 38.6621 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 69.85 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 69.85 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 69.85 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 69.85 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 69.85 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "13847444-269d-4829-9681-60342892be4d")
+		)
+		(pin "2"
+			(uuid "0edf3769-2f04-4f3e-88e8-ca128b104fc8")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 110.49 104.14 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c70faf48-47a3-44f0-8fdb-298c8ae0946b")
+		(property "Reference" "D62"
+			(at 112.0775 98.9711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 112.0775 100.8921 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 110.49 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 110.49 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 110.49 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 110.49 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 110.49 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0f3a844f-e392-4c64-b132-060ceedb4608")
+		)
+		(pin "2"
+			(uuid "1058e651-1cfc-4693-813d-a25674b7937a")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D62")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 80.01 50.8 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ca0bbd72-e85a-4c12-b5cd-25b8139d7833")
+		(property "Reference" "D11"
+			(at 81.5975 45.6311 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 81.5975 47.5521 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 80.01 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 80.01 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 80.01 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 80.01 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "87c0a5fe-21ac-4bf0-a4a9-887d12cb7e08")
+		)
+		(pin "2"
+			(uuid "fc0e7b8e-c654-49ee-9cd3-479f067f2e26")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 80.01 86.36 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cbe50be1-dada-4987-87bf-dd0cbfad8f07")
+		(property "Reference" "D43"
+			(at 81.5975 81.1911 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 81.5975 83.1121 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 80.01 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 80.01 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 80.01 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 80.01 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4a31bf4e-0ad7-4a8c-b8a9-e3c197e55e4b")
+		)
+		(pin "2"
+			(uuid "2d3df2f4-48ab-45e4-9e15-4d794eb9086d")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D43")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 100.33 41.91 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cbf7ad08-09d1-4152-bea6-56906b90d968")
+		(property "Reference" "D5"
+			(at 101.9175 36.7411 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 101.9175 38.6621 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 100.33 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 100.33 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 100.33 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 100.33 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 100.33 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8c4477f5-9c7b-4f53-85ea-497aeb75b0ca")
+		)
+		(pin "2"
+			(uuid "d608a75d-2fbd-4732-ada5-cec13d4a2838")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 110.49 50.8 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ce05f096-e854-40ad-b28c-b78756390cfb")
+		(property "Reference" "D14"
+			(at 112.0775 45.6311 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 112.0775 47.5521 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 110.49 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 110.49 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 110.49 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 110.49 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 110.49 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2d87423b-5836-4a01-9ef2-053086dc77b7")
+		)
+		(pin "2"
+			(uuid "75de34dd-46b9-4546-8e1b-dc0983c37f13")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 90.17 77.47 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d0e6f3ef-a103-4a01-93b8-5dc2cb3adbe0")
+		(property "Reference" "D36"
+			(at 91.7575 72.3011 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 91.7575 74.2221 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 90.17 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 90.17 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 90.17 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 90.17 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8b243359-089c-45bf-8018-a14b2b7b6a24")
+		)
+		(pin "2"
+			(uuid "9974fad9-3345-450e-882d-c4240556a365")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 90.17 95.25 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d3244149-dcce-487e-a57d-a3d80df5b323")
+		(property "Reference" "D52"
+			(at 91.7575 90.0811 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 91.7575 92.0021 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 90.17 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 90.17 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 90.17 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 90.17 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bccf9803-1f84-4f39-ac73-e674850c5c0b")
+		)
+		(pin "2"
+			(uuid "e1e8f756-3f34-4331-a1c7-50e9faac3151")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D52")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 130.81 59.69 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d3f8081e-889c-4e65-919f-d0603801830f")
+		(property "Reference" "D24"
+			(at 132.3975 54.5211 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 132.3975 56.4421 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 130.81 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 130.81 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 130.81 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 130.81 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 130.81 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "32cb02af-95eb-4bf0-966e-3c3248136953")
+		)
+		(pin "2"
+			(uuid "6237c324-b6af-4bc6-9f91-bea5adcaac15")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 120.65 104.14 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "dcda00b2-6622-4e74-b394-679bc7192561")
+		(property "Reference" "D63"
+			(at 122.2375 98.9711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 122.2375 100.8921 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 120.65 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 120.65 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 120.65 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 120.65 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 120.65 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "135c853b-688d-4920-b376-eed6c9b59114")
+		)
+		(pin "2"
+			(uuid "bd00086d-0446-4013-b44e-80849cb3faf8")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D63")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 120.65 77.47 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e664d403-be59-4bcc-96b4-a0cb8db15ffe")
+		(property "Reference" "D39"
+			(at 122.2375 72.3011 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 122.2375 74.2221 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 120.65 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 120.65 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 120.65 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 120.65 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 120.65 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c37fa366-39ef-4f3c-9937-c79d076db111")
+		)
+		(pin "2"
+			(uuid "be81f3f4-e62e-4e60-a24c-1e23c5b6e0f6")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D39")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 90.17 41.91 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e9ec6443-6a0f-4dce-8612-82e69585674f")
+		(property "Reference" "D4"
+			(at 91.7575 36.7411 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 91.7575 38.6621 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 90.17 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 90.17 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 90.17 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 90.17 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 90.17 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b8c447ce-fe26-4786-a3e7-8866572cf2e7")
+		)
+		(pin "2"
+			(uuid "db9a48bb-bbca-4469-8c2a-9bef7499b7e9")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 80.01 77.47 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eb9d0395-929f-4744-bb39-fde720d4e418")
+		(property "Reference" "D35"
+			(at 81.5975 72.3011 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 81.5975 74.2221 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 80.01 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 80.01 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 80.01 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 80.01 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 80.01 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "83fa27cb-0226-4140-bb4d-f2a0c0c95aca")
+		)
+		(pin "2"
+			(uuid "1a0def69-8bd7-43d1-99fd-dce2fe1c56d7")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 130.81 95.25 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f148ff75-42a7-4e12-8a6e-c2f6512549f3")
+		(property "Reference" "D56"
+			(at 132.3975 90.0811 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 132.3975 92.0021 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 130.81 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 130.81 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 130.81 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 130.81 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 130.81 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8b8337da-f451-4161-97e6-adf640354e00")
+		)
+		(pin "2"
+			(uuid "fe1fe272-c352-4cb2-a196-87f44b076bdd")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D56")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 69.85 77.47 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f8201e0d-adbf-4e59-b49a-905b68db2f1a")
+		(property "Reference" "D34"
+			(at 71.4375 72.3011 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 71.4375 74.2221 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 69.85 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 69.85 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 69.85 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 69.85 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 69.85 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3b7a2ca5-1eaf-473c-9b3a-1286b9d56a2c")
+		)
+		(pin "2"
+			(uuid "7127826d-0753-44a8-893d-c32d939fa8c3")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D34")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 69.85 104.14 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fa2dc04a-66fb-46c2-844b-fc361098391c")
+		(property "Reference" "D58"
+			(at 71.4375 98.9711 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 71.4375 100.8921 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 69.85 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 69.85 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 69.85 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 69.85 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 69.85 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "33c4f9df-2ae9-4472-a273-4abbc7482d2e")
+		)
+		(pin "2"
+			(uuid "9ae0d53f-2274-4341-8331-97a2a5118ca4")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D58")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:LED")
+		(at 120.65 95.25 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "fd52ff17-837e-4730-bc91-bee748e7ad30")
+		(property "Reference" "D55"
+			(at 122.2375 90.0811 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "LED"
+			(at 122.2375 92.0021 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Custom footprints:LED_APG0603SEC-E-TT_KNB - with via"
+			(at 120.65 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.mouser.com/datasheet/2/216/APG0603SEC_E_TT-953258.pdf"
+			(at 120.65 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 120.65 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Kingbright "
+			(at 120.65 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "APG0603SEC-E-TT "
+			(at 120.65 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "69002ced-da1d-498c-b5b8-60234afbf73e")
+		)
+		(pin "2"
+			(uuid "85583d0b-1b87-4052-85c0-79d92b928d08")
+		)
+		(instances
+			(project "Micro LED Array - 400µm spacing.pro"
+				(path "/db657c83-5849-467e-b25d-f96369a10bc7"
+					(reference "D55")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
