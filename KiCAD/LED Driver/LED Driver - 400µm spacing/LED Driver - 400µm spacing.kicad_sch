@@ -3237,7 +3237,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 99.06 77.47 90)
+		(at 99.06 72.39 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3246,7 +3246,7 @@
 		(fields_autoplaced yes)
 		(uuid "5808af75-ba2a-4dfc-94f3-2d9ab0ed9097")
 		(property "Reference" "#PWR08"
-			(at 105.41 77.47 0)
+			(at 105.41 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3255,7 +3255,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 102.235 77.7868 90)
+			(at 102.235 72.7068 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3264,7 +3264,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 99.06 77.47 0)
+			(at 99.06 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3273,7 +3273,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 99.06 77.47 0)
+			(at 99.06 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3282,7 +3282,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 99.06 77.47 0)
+			(at 99.06 72.39 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3304,7 +3304,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 99.06 72.39 270)
+		(at 99.06 77.47 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3313,7 +3313,7 @@
 		(fields_autoplaced yes)
 		(uuid "7e5ff831-3727-4f0c-998f-b65319aef443")
 		(property "Reference" "#PWR05"
-			(at 95.25 72.39 0)
+			(at 95.25 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3322,7 +3322,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 102.235 72.7068 90)
+			(at 102.235 77.7868 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3331,7 +3331,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 99.06 72.39 0)
+			(at 99.06 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3340,7 +3340,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 99.06 72.39 0)
+			(at 99.06 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3349,7 +3349,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 99.06 72.39 0)
+			(at 99.06 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
