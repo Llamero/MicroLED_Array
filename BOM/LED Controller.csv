@@ -1,0 +1,7 @@
+"Reference","Value","Datasheet","Footprint","Qty","Manufacturer","Part"
+"J1","0525590870","https://www.molex.com/en-us/products/part-detail/525590870?display=pdf","Custom:CON_525590870_MOL - 8x ribbon vert","1","Molex","0525590870"
+"J2,J4","Conn_01x02_Socket","https://www.molex.com/en-us/products/part-detail/901471102?display=pdf","","2","Molex","0901471102"
+"J3","Conn_01x02_Pin","https://www.molex.com/webdocs/datasheets/pdf/en-us/0022285027_PCB_HEADERS.pdf","Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical","1","Molex","0022285027"
+"JP1","Jumper_3_Open","https://www.molex.com/en-us/products/part-detail/22053141?display=pdf","Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical","1","Molex","0022285033"
+"RN1","R_Pack02","https://industrial.panasonic.com/cdbs/www-data/pdf/AOC0000/AOC0000C14.pdf","Resistor_SMD:R_Array_Concave_2x0603","1","Panasonic Electronic Components","EXB-34V102JV"
+"U1","Itsy_Bitsy_32u4","https://cdn-learn.adafruit.com/downloads/pdf/introducting-itsy-bitsy-32u4.pdf","Custom footprints:Itsy Bitsy 32u4","1","Adafruit, Samtec, Sullins","1x Itsy Bitsy - 3677, 1x SSW-105-01-T-S, 2x SSW-114-01-T-S, 1x PRPC040SAAN-RC"

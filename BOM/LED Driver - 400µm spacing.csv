@@ -1,0 +1,6 @@
+"Reference","Value","Datasheet","Footprint","Qty","DNP","Manufacturer","Part"
+"C1,C2,C3","1µF","https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/41/CL05A105KA5NQNC.pdf","Capacitor_SMD:C_0402_1005Metric","3","","Samsung Electro-Mechanics","CL05A105KA5NQNC"
+"FFC1","FFC","https://www.molex.com/content/dam/molex/molex-dot-com/products/automated/en-us/productspecificationpdf/151/15166/PS-15166-001-001.pdf?inline","","1","","Molex","0151660093"
+"HS1","Heatsink","http://www.assmann-wsw.com/uploads/datasheets/ASS_0874_HS.pdf","Custom:heatsink","1","","Assmann WSW Components","V2016B"
+"J1","0525590870","https://www.molex.com/en-us/products/part-detail/525590870?display=pdf","Custom:CON_525590870_MOL - 8x ribbon vert","1","","Molex","0525590870"
+"U1","LP5868TRKPR","https://www.ti.com/lit/ds/symlink/lp5868t.pdf","Custom:VQFN40-RKP_TEX","1","","Texas Instruments ","LP5868TRKPR "
