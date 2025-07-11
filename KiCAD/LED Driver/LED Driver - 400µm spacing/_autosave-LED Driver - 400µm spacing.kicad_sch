@@ -2075,10 +2075,6 @@
 		(uuid "f1641c0f-cde1-4f1c-a572-1eb187667ee7")
 	)
 	(no_connect
-		(at 228.6 74.93)
-		(uuid "09180395-c750-40b1-8df3-35270e351a48")
-	)
-	(no_connect
 		(at 134.62 59.69)
 		(uuid "0b494718-8c5a-4a61-97ab-60d47486f9bb")
 	)
@@ -2904,6 +2900,73 @@
 			(project "LED Driver - 400µm spacing"
 				(path "/333dbdf9-e35a-4a4e-87df-f2105d57feb4"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 228.6 74.93 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "19c8593d-6a1d-40d5-a154-c6253c4ded74")
+		(property "Reference" "#PWR010"
+			(at 234.95 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 231.775 74.93 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 228.6 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 228.6 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 228.6 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9a803683-c988-457d-9d1a-d4eb4a94cf33")
+		)
+		(instances
+			(project "LED Driver - 400µm spacing"
+				(path "/333dbdf9-e35a-4a4e-87df-f2105d57feb4"
+					(reference "#PWR010")
 					(unit 1)
 				)
 			)

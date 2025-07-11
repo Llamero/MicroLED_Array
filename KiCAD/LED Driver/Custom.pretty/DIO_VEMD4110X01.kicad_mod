@@ -1,0 +1,220 @@
+(footprint "DIO_VEMD4110X01"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0.31 -1.64 0)
+		(layer "F.SilkS")
+		(uuid "43e7beee-3714-4967-bbc2-fb6c9ff9c1fd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "DIO_VEMD4110X01"
+		(at 3.102 1.3352 0)
+		(layer "F.Fab")
+		(uuid "ca6fcec5-0d89-466d-9fa6-2fc5798f1d4c")
+		(effects
+			(font
+				(size 0.48 0.48)
+				(thickness 0.12)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1d2365b8-ccd2-4574-b9a2-57869d6bac2a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6801d6b5-0189-429c-9929-f4208fee10dd")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "09f18010-d686-4256-aee0-0dddf4773e92")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.35 -0.77)
+		(end -1.35 0.77)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "0548c3fb-5e92-4081-9004-fc4d5642d303")
+	)
+	(fp_line
+		(start -1.35 0.77)
+		(end -1 0.77)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "1f2a22fe-ab95-4640-9575-d847108c09f6")
+	)
+	(fp_line
+		(start -1 -0.77)
+		(end -1.35 -0.77)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "f474abf9-d5f9-41a2-b141-ccaa42b4d3af")
+	)
+	(fp_line
+		(start -1 -0.77)
+		(end 1 -0.77)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1cd9ffb1-1107-4801-992a-4705a34456e2")
+	)
+	(fp_line
+		(start -1 0.77)
+		(end 1 0.77)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a340a76f-31ff-4c6a-8b4a-377b5920d1ed")
+	)
+	(fp_line
+		(start -1.35 -0.875)
+		(end 1.35 -0.875)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "8721135e-68ca-4457-bf87-c5357bdde8f4")
+	)
+	(fp_line
+		(start -1.35 0.875)
+		(end -1.35 -0.875)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "1df56f76-2c0c-456c-a83b-e37c443ead10")
+	)
+	(fp_line
+		(start 1.35 -0.875)
+		(end 1.35 0.875)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "87d2906a-d0f8-4260-abb8-f6436f1fb8f9")
+	)
+	(fp_line
+		(start 1.35 0.875)
+		(end -1.35 0.875)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "c911e6df-3635-4c23-8d7c-ec9ca25e52fc")
+	)
+	(fp_line
+		(start -1 -0.625)
+		(end 1 -0.625)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "70f8ad49-71af-4810-9ab7-6f3d650aa5f5")
+	)
+	(fp_line
+		(start -1 0.625)
+		(end -1 -0.625)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d04d273f-2265-4da7-a5d0-b26a5a4320c8")
+	)
+	(fp_line
+		(start 1 -0.625)
+		(end 1 0.625)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d405519c-cb21-4e34-aefd-d284a3540209")
+	)
+	(fp_line
+		(start 1 0.625)
+		(end -1 0.625)
+		(stroke
+			(width 0.127)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "67c8d44d-0b00-4229-8b41-abe2f78470b3")
+	)
+	(pad "1" smd rect
+		(at 0.45 0)
+		(size 1.3 0.9)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(solder_mask_margin 0.102)
+		(uuid "b71440a9-3850-4019-9a8b-62ce5af3245d")
+	)
+	(pad "2" smd rect
+		(at -0.8 0)
+		(size 0.6 0.9)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(solder_mask_margin 0.102)
+		(uuid "d45c3df9-ce60-4bc5-a7cf-629416374414")
+	)
+	(model "C:/Users/Ben/Documents/GitHub/MicroLED_Array/KiCAD/LED Driver/CAD Models/VEMD4110X01.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
+)
