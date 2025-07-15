@@ -599,7 +599,7 @@
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "370cb3c7-377a-412e-8a0f-9d00b5a62923")
+			(uuid "f2487dda-ab8e-492a-b3dd-7d571a5b99e6")
 			(effects
 				(font
 					(size 1 1)
@@ -612,7 +612,7 @@
 			(at 0 -1 0)
 			(unlocked yes)
 			(layer "B.Fab")
-			(uuid "48378e32-64da-4a53-bcba-088acd247e25")
+			(uuid "a26e19b5-8989-407b-b2e7-ba3f3736b0f9")
 			(effects
 				(font
 					(size 1 1)
@@ -626,7 +626,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "d7535eb1-2a69-4c6e-bfdf-2a2d933c96e3")
+			(uuid "e79aa198-6201-48dd-8433-07782a65b7fb")
 			(effects
 				(font
 					(size 1 1)
@@ -640,7 +640,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "12783b71-bf68-4873-a2f4-49630031d741")
+			(uuid "2f0c471f-fda6-412d-96a1-481d998870b0")
 			(effects
 				(font
 					(size 1 1)
@@ -654,7 +654,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "e0e0e547-1543-4896-93cb-5fac4a3745b9")
+			(uuid "efe4da78-04cc-4d43-94a5-454d940c6900")
 			(effects
 				(font
 					(size 1 1)
@@ -695,7 +695,7 @@
 		(path "/20ea59fd-bdb8-4ca6-aee4-9baf8762db1f")
 		(sheetname "Root")
 		(sheetfile "LED Driver - 400µm spacing.kicad_sch")
-		(attr exclude_from_bom)
+		(attr through_hole)
 		(fp_circle
 			(center 0 0)
 			(end 1 0)
@@ -705,14 +705,14 @@
 			)
 			(fill none)
 			(layer "B.SilkS")
-			(uuid "f398a00f-a922-4434-8bc1-714da9b94d29")
+			(uuid "32818b9d-1c7b-48f7-8b53-941cda8aebca")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0 180)
 			(size 1.1 1.1)
 			(drill 1.1)
 			(layers "F&B.Cu" "*.Mask")
-			(uuid "29bca574-5a2e-4575-87b7-8241707d7275")
+			(uuid "fce51dd2-8304-4b45-a1b2-0588b8413a2d")
 		)
 		(model "C:/Users/Ben/Documents/GitHub/MicroLED_Array/KiCAD/LED Driver/CAD Models/grainger-6HY48.stp"
 			(offset
@@ -3313,7 +3313,7 @@
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "dda13643-bcdc-47b1-bd7d-c058fb5afd0b")
+			(uuid "eab4880e-e288-4207-afd2-d4a4365502c8")
 			(effects
 				(font
 					(size 1 1)
@@ -3326,7 +3326,7 @@
 			(at 0 -1 0)
 			(unlocked yes)
 			(layer "B.Fab")
-			(uuid "d1985ed6-9c52-42de-9bce-ee24e4e5e7c0")
+			(uuid "619c4b8d-893c-4d3b-806d-ec145c44029a")
 			(effects
 				(font
 					(size 1 1)
@@ -3340,7 +3340,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "95c28fdd-579b-453d-8759-a59800032085")
+			(uuid "8d60029b-1a0c-462a-9ca7-9a0f09e26ce0")
 			(effects
 				(font
 					(size 1 1)
@@ -3354,7 +3354,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "4c777a88-c45d-4637-b47d-347e4b65255c")
+			(uuid "67f46f0c-b35b-4db8-a83f-ae540b5ec48b")
 			(effects
 				(font
 					(size 1 1)
@@ -3368,7 +3368,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "0dc9bc56-3430-47d9-9742-0d6a4f523aff")
+			(uuid "87112255-061d-49c4-928d-ecd3d946a473")
 			(effects
 				(font
 					(size 1 1)
@@ -3409,7 +3409,7 @@
 		(path "/febbe802-1e15-4f63-9176-d4560e128240")
 		(sheetname "Root")
 		(sheetfile "LED Driver - 400µm spacing.kicad_sch")
-		(attr exclude_from_bom)
+		(attr through_hole)
 		(fp_circle
 			(center 0 0)
 			(end 1 0)
@@ -3419,14 +3419,14 @@
 			)
 			(fill none)
 			(layer "B.SilkS")
-			(uuid "6230ca42-0d51-4abc-a954-b888110e1e12")
+			(uuid "4bedcbb7-91e1-4db8-9f24-2deffb324ada")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0 180)
 			(size 1.1 1.1)
 			(drill 1.1)
 			(layers "F&B.Cu" "*.Mask")
-			(uuid "1cd07d2f-a15f-4181-bd15-2cf3879774b2")
+			(uuid "88ee3032-4181-4a94-9025-5619000b9324")
 		)
 		(model "C:/Users/Ben/Documents/GitHub/MicroLED_Array/KiCAD/LED Driver/CAD Models/grainger-6HY48.stp"
 			(offset
@@ -3449,7 +3449,7 @@
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "2a143b97-ccb4-48ea-bb1c-d9a65e3e1f24")
+			(uuid "b9919a33-4416-4e0e-8f81-d8ec0597ac12")
 			(effects
 				(font
 					(size 1 1)
@@ -3462,7 +3462,7 @@
 			(at 0 -1 0)
 			(unlocked yes)
 			(layer "B.Fab")
-			(uuid "1135a9bc-6add-4e4b-bf4d-2e3839baa88a")
+			(uuid "640de15f-8001-4287-b757-d786b4a70d55")
 			(effects
 				(font
 					(size 1 1)
@@ -3476,7 +3476,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "77255eae-b1da-4848-8ff4-64d9d084001b")
+			(uuid "f6f84552-6a9f-4ee7-b13f-34be172b6e7e")
 			(effects
 				(font
 					(size 1 1)
@@ -3490,7 +3490,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "d924de51-1b38-4df4-94ad-8b3583a2a881")
+			(uuid "799fa320-66a4-4be5-9eff-cbec16f9b718")
 			(effects
 				(font
 					(size 1 1)
@@ -3504,7 +3504,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "cfc32e4e-6985-4e12-9238-9ab73a1db3e6")
+			(uuid "339de458-093c-42e4-bfbe-e6f6927a17e0")
 			(effects
 				(font
 					(size 1 1)
@@ -3545,7 +3545,7 @@
 		(path "/95c52d5b-fdf3-4069-b4e7-15e657d3fb9a")
 		(sheetname "Root")
 		(sheetfile "LED Driver - 400µm spacing.kicad_sch")
-		(attr exclude_from_bom)
+		(attr through_hole)
 		(fp_circle
 			(center 0 0)
 			(end 1 0)
@@ -3555,14 +3555,14 @@
 			)
 			(fill none)
 			(layer "B.SilkS")
-			(uuid "c9f35989-5026-4aea-816a-e7ce447d9cec")
+			(uuid "45eb7b3d-2e17-4fe8-8bec-a1a9a4033950")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0 180)
 			(size 1.1 1.1)
 			(drill 1.1)
 			(layers "F&B.Cu" "*.Mask")
-			(uuid "c43d502d-c4c3-4ff0-a981-d50c8845e590")
+			(uuid "a74a71f8-c043-466a-a02e-4cdcdd4ad743")
 		)
 		(model "C:/Users/Ben/Documents/GitHub/MicroLED_Array/KiCAD/LED Driver/CAD Models/grainger-6HY48.stp"
 			(offset
@@ -3832,7 +3832,7 @@
 			(unlocked yes)
 			(layer "B.SilkS")
 			(hide yes)
-			(uuid "0472a7e7-7693-436a-a99f-325be163e69b")
+			(uuid "ccff8806-8829-44e5-8435-5e7bbfa0dd51")
 			(effects
 				(font
 					(size 1 1)
@@ -3845,7 +3845,7 @@
 			(at 0 -1 0)
 			(unlocked yes)
 			(layer "B.Fab")
-			(uuid "2eb3a04c-6c95-4092-98c1-b9e36a509e85")
+			(uuid "31622afb-3f72-45df-b71d-fd53e82863ed")
 			(effects
 				(font
 					(size 1 1)
@@ -3859,7 +3859,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "6d91df6b-ccfb-4689-bb8b-ed3a3b778677")
+			(uuid "1e535881-d84d-42e9-be35-a37c78e753ae")
 			(effects
 				(font
 					(size 1 1)
@@ -3873,7 +3873,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "b0545cd1-b2e7-4d60-93b5-be064957ad8f")
+			(uuid "51e70654-cc62-4f90-a9b9-264d68b37e2e")
 			(effects
 				(font
 					(size 1 1)
@@ -3887,7 +3887,7 @@
 			(unlocked yes)
 			(layer "B.Fab")
 			(hide yes)
-			(uuid "26257cbf-9cb5-42b4-a7e8-ed2c3eada365")
+			(uuid "699c3c23-8d6a-47ce-9f35-10d82572ae5a")
 			(effects
 				(font
 					(size 1 1)
@@ -3928,7 +3928,7 @@
 		(path "/a6f84abb-3b59-4a70-9311-f5defc1c07c8")
 		(sheetname "Root")
 		(sheetfile "LED Driver - 400µm spacing.kicad_sch")
-		(attr exclude_from_bom)
+		(attr through_hole)
 		(fp_circle
 			(center 0 0)
 			(end 1 0)
@@ -3938,14 +3938,14 @@
 			)
 			(fill none)
 			(layer "B.SilkS")
-			(uuid "a41c6835-dbd7-4b63-8d03-a463fd815f99")
+			(uuid "923cba1e-663b-4f90-854d-915357ac5cdd")
 		)
 		(pad "" np_thru_hole circle
 			(at 0 0 180)
 			(size 1.1 1.1)
 			(drill 1.1)
 			(layers "F&B.Cu" "*.Mask")
-			(uuid "3791dbab-a015-42e3-add6-b489228df753")
+			(uuid "f53f0d45-ffcb-433d-a346-b72a72990667")
 		)
 		(model "C:/Users/Ben/Documents/GitHub/MicroLED_Array/KiCAD/LED Driver/CAD Models/grainger-6HY48.stp"
 			(offset

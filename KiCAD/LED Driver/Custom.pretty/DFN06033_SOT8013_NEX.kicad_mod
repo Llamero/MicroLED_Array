@@ -1,0 +1,207 @@
+(footprint "DFN06033_SOT8013_NEX"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(tags "PMX100UNEZ ")
+	(property "Reference" "REF**"
+		(at 0.32 1.6 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "10b6960c-bcae-4bc3-8a52-a91a9614979c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "DFN06033_SOT8013_NEX"
+		(at -0.09 1.61 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "cf9252f8-a95b-476a-8724-6e8683aedf19")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7cee43b8-d974-4cbc-a257-74566808a523")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "717aaf64-6e13-4a4a-acb7-2baa04f46397")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3ba8dc27-fc32-498a-8a56-3be802b5451a")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -0.5 -0.3)
+		(end 0.5 0.3)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "60e5473f-0f78-458e-9676-d5092f42ddfb")
+	)
+	(fp_rect
+		(start -0.5 -0.3)
+		(end 0.5 0.3)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "aa34638e-9103-4d6c-ac3f-bc525a0b8e10")
+	)
+	(fp_line
+		(start -0.3302 -0.1778)
+		(end -0.3302 0.1778)
+		(stroke
+			(width 0.0254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d69b1967-4494-4d1c-b13b-0184788144d7")
+	)
+	(fp_line
+		(start -0.3302 0.1778)
+		(end 0.3302 0.1778)
+		(stroke
+			(width 0.0254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0205c532-50ff-4556-a5d2-7f2f7ec84b66")
+	)
+	(fp_line
+		(start 0.3302 -0.1778)
+		(end -0.3302 -0.1778)
+		(stroke
+			(width 0.0254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a59df334-bfc1-4842-a8be-a21a72b66dab")
+	)
+	(fp_line
+		(start 0.3302 0.1778)
+		(end 0.3302 -0.1778)
+		(stroke
+			(width 0.0254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b65158c4-b372-4dda-b46a-1ea5ed2145f7")
+	)
+	(fp_arc
+		(start 0.3048 -0.1778)
+		(mid 0 0.127)
+		(end -0.3048 -0.1778)
+		(stroke
+			(width 0.0254)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "6621a860-d20b-4252-971b-b86614526909")
+	)
+	(fp_circle
+		(center -0.1778 0)
+		(end -0.1016 0)
+		(stroke
+			(width 0.0254)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.Fab")
+		(uuid "5bf40fe3-2e4b-48c8-a1e0-2e55b39e3fcc")
+	)
+	(fp_text user "."
+		(at -0.95 0.17 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "2cdaba25-a1a9-402f-b09b-607e13c47202")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at -0.37 1.63 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "dbc890b5-97cb-44d8-8756-47646d8ed39c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.2286 0)
+		(size 0.1016 0.2794)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "19b2a493-220b-400a-a86d-f640c75f3475")
+	)
+	(pad "2" smd rect
+		(at 0 0)
+		(size 0.1016 0.2794)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "c5eea29b-d60c-41e2-8570-6fec3e1f47fe")
+	)
+	(pad "3" smd rect
+		(at 0.2286 0)
+		(size 0.1016 0.2794)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "7fa658bd-ce00-4868-beba-8c1e52691b53")
+	)
+	(model "C:/Users/Ben/Documents/GitHub/MicroLED_Array/KiCAD/LED Driver/CAD Models/DFN06033_SOT8013_NEX.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

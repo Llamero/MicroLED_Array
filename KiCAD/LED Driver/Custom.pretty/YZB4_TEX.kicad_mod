@@ -1,0 +1,140 @@
+(footprint "YZB4_TEX"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(tags "CSD13201W10 ")
+	(property "Reference" "REF**"
+		(at 0.05 2.13 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "7f8bb643-476d-4230-9b7c-c04c383a0145")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "YZB4_TEX"
+		(at 0.29 4.66 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8a1bab36-dd31-4358-a5ee-31ab489be489")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "17dcc5fb-1316-47e1-928b-9953714acfc2")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "973aba16-41e4-4b48-ae69-c1cee0b09e6e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "668d50bb-49a8-40b7-b194-d7ca001e6768")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -0.6 -0.6)
+		(end 0.6 0.6)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "bd033247-24e1-49b2-8f79-6927a2f3e440")
+	)
+	(fp_rect
+		(start -0.6 -0.6)
+		(end 0.6 0.6)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "0fa33d8d-f3f6-49a6-8c39-26a3f09f61eb")
+	)
+	(fp_text user "."
+		(at -1.04 -0.54 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "931ef9bd-04e6-452e-9a06-6d9c8b130fa2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
+	(pad "1" smd circle
+		(at -0.25 -0.25)
+		(size 0.35 0.35)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "e2386088-817e-4b3c-ae32-6aeb6c444f91")
+	)
+	(pad "2" smd circle
+		(at -0.25 0.25)
+		(size 0.35 0.35)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "d9df403b-fce9-4e35-a741-1fd315d41811")
+	)
+	(pad "2" smd circle
+		(at 0.25 0.25)
+		(size 0.35 0.35)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "92b46e60-8ead-48b1-ac5f-df0eda164370")
+	)
+	(pad "3" smd circle
+		(at 0.25 -0.25)
+		(size 0.35 0.35)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "b7e4db70-ad99-4acf-bb54-6e1aacab4bea")
+	)
+	(model "C:/Users/Ben/Documents/GitHub/MicroLED_Array/KiCAD/LED Driver/CAD Models/CSD1320.step"
+		(offset
+			(xyz -0.5 -0.5 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

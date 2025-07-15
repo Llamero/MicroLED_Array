@@ -1,0 +1,121 @@
+(footprint "1mm pad"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 3.5 -3.79 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "b1971d2a-94ec-4cc8-8da3-c40aa7959893")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "1mm pad"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "464a30f1-8983-4c00-823c-baa64bee17c5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "63134c16-07e8-4642-a2ea-b8efd2fdd085")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "49c23fec-6ba4-4ed8-9f07-92607aac96d8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9dabc634-9d7d-4700-8c29-49aa6f751cb3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd circle
+		(at 0 0)
+		(size 1 1)
+		(layers "F.Cu" "F.Mask")
+		(uuid "e719d30d-4bcc-4a47-9227-6fa61d6f9781")
+	)
+	(pad "2" smd circle
+		(at -1.32 0.71)
+		(size 1 1)
+		(layers "F.Cu" "F.Mask")
+		(uuid "8ebd10fa-fb21-46d3-9a99-7dfd6119e435")
+	)
+	(pad "3" smd circle
+		(at -0.41 -2.78)
+		(size 1 1)
+		(layers "F.Cu" "F.Mask")
+		(uuid "ccbcf018-934f-4cb8-a2d6-c30c4ae17278")
+	)
+	(model "C:/Users/Ben/Documents/GitHub/MicroLED_Array/KiCAD/LED Driver/CAD Models/0985-0-15-20-71-14-11-0.step"
+		(offset
+			(xyz 0 0 6.25)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 90 0 0)
+		)
+	)
+	(model "C:/Users/Ben/Documents/GitHub/MicroLED_Array/KiCAD/LED Driver/CAD Models/0985-0-15-20-71-14-11-0.step"
+		(offset
+			(xyz -1.32 -0.71 6.25)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 90 0 0)
+		)
+	)
+	(model "C:/Users/Ben/Documents/GitHub/MicroLED_Array/KiCAD/LED Driver/CAD Models/0985-0-15-20-71-14-11-0.step"
+		(offset
+			(xyz -0.41 2.78 6.25)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 90 0 0)
+		)
+	)
+)
