@@ -1,0 +1,136 @@
+(footprint "Photodiode"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0.15 -1.8 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "dfc5cf89-6ae6-4bbc-b69a-1f8a1849b900")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Photodiode"
+		(at 0 1 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "e5952646-aa3a-48de-b6be-d049f5822f55")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7f35accf-fe4a-4ab3-9015-b69f6ce9e4d3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e6b39bb1-b761-4d4a-a168-bc3d71bc6a43")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c2c07f38-0881-4b42-a236-d3343ca511c1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.83 -0.85)
+		(end -1.83 0.83)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "26466cdc-854c-4103-ac22-4f1efc96d8a1")
+	)
+	(fp_line
+		(start -1.83 0.83)
+		(end 1.83 0.83)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "6449ac23-2a96-4262-bb32-65f98c3c4d18")
+	)
+	(fp_line
+		(start 1.82 -0.85)
+		(end -1.83 -0.85)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "8212d7b3-225d-40bc-b297-1fe05f8e725f")
+	)
+	(fp_rect
+		(start -1.82 -0.84)
+		(end 1.83 0.83)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill none)
+		(layer "F.CrtYd")
+		(uuid "acbd8f00-737b-4cf3-9ac3-4b4fa2d02bce")
+	)
+	(pad "1" smd rect
+		(at -1.1 0)
+		(size 1 1.25)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(solder_mask_margin 0.102)
+		(uuid "be43701c-86fa-4a6a-a2d4-330ae8af8f3c")
+	)
+	(pad "2" smd rect
+		(at 1.1 0)
+		(size 1 1.25)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(solder_mask_margin 0.102)
+		(uuid "9f4addec-e339-4e9f-9bef-e9163cbee5ae")
+	)
+	(model "${KIPRJMOD}/STEP/LED_SFH2713_OSR.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

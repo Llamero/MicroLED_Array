@@ -1,4 +1,4 @@
-(footprint "1mm pad"
+(footprint "1mm pad x4"
 	(version 20240108)
 	(generator "pcbnew")
 	(generator_version "8.0")
@@ -16,7 +16,7 @@
 			)
 		)
 	)
-	(property "Value" "1mm pad"
+	(property "Value" "1mm pad x4"
 		(at 0 1 0)
 		(unlocked yes)
 		(layer "F.Fab")
@@ -67,33 +67,33 @@
 			)
 		)
 	)
-	(pad "1" thru_hole circle
+	(pad "1" smd circle
 		(at 0 0)
 		(size 1 1)
-		(drill 0.5)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
+		(layers "F.Cu" "F.Mask")
 		(uuid "e719d30d-4bcc-4a47-9227-6fa61d6f9781")
 	)
-	(pad "2" thru_hole circle
+	(pad "2" smd circle
 		(at -1.32 0.71)
 		(size 1 1)
-		(drill 0.5)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
+		(layers "F.Cu" "F.Mask")
 		(uuid "8ebd10fa-fb21-46d3-9a99-7dfd6119e435")
 	)
-	(pad "3" thru_hole circle
+	(pad "3" smd circle
 		(at -0.41 -2.78)
 		(size 1 1)
-		(drill 0.5)
-		(layers "*.Cu" "*.Mask")
-		(remove_unused_layers no)
+		(layers "F.Cu" "F.Mask")
 		(uuid "ccbcf018-934f-4cb8-a2d6-c30c4ae17278")
 	)
+	(pad "4" smd circle
+		(at -2.39 2.12)
+		(size 1 1)
+		(layers "F.Cu" "F.Mask")
+		(uuid "68ef9410-0714-4820-bf04-32f7c23b4fe9")
+	)
 	(model "C:/Users/Ben/Documents/GitHub/MicroLED_Array/KiCAD/LED Driver/CAD Models/0985-0-15-20-71-14-11-0.step"
 		(offset
-			(xyz 0 0 -1.65)
+			(xyz 0 0 6.25)
 		)
 		(scale
 			(xyz 1 1 1)
@@ -104,7 +104,7 @@
 	)
 	(model "C:/Users/Ben/Documents/GitHub/MicroLED_Array/KiCAD/LED Driver/CAD Models/0985-0-15-20-71-14-11-0.step"
 		(offset
-			(xyz -1.32 -0.71 -1.65)
+			(xyz -1.32 -0.71 6.25)
 		)
 		(scale
 			(xyz 1 1 1)
@@ -115,7 +115,18 @@
 	)
 	(model "C:/Users/Ben/Documents/GitHub/MicroLED_Array/KiCAD/LED Driver/CAD Models/0985-0-15-20-71-14-11-0.step"
 		(offset
-			(xyz -0.41 2.78 -1.65)
+			(xyz -0.41 2.78 6.25)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 90 0 0)
+		)
+	)
+	(model "C:/Users/Ben/Documents/GitHub/MicroLED_Array/KiCAD/LED Driver/CAD Models/0985-0-15-20-71-14-11-0.step"
+		(offset
+			(xyz -2.39 -2.12 6.25)
 		)
 		(scale
 			(xyz 1 1 1)

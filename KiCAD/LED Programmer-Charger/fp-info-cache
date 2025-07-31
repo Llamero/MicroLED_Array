@@ -1,4 +1,4 @@
-24210345019924617
+24233035167120487
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -54796,77 +54796,168 @@ Custom
 4
 4
 Custom
-ATtiny3226
+1x Solder pads
 
-ATTINY1606-MNR 
+
 0
-21
-21
+1
+1
 Custom
-CON_525590870_MOL - 8x ribbon vert
+AD5242BRUZ1M
 
-525590870 
+AD5242BRUZ1M 
 0
-12
+16
+16
+Custom
+ADAMTECH_RF2-143-T-17-50-G
+
+
+0
+5
+2
+Custom
+AMPHENOL_10118193-0001LF
+
+
+0
+11
+6
+Custom
+AMPHENOL_SFW8S-2STE1LF
+
+
+0
+8
+8
+Custom
+Bridged_0805_2012Metric
+Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
+resistor
+0
+2
+2
+Custom
+CC-BY-SA Symbol
+Symbol, Creative Commons Public Domain, SilkScreenTop, Small,
+Symbol, Creative Commons Public Domain, SilkScreen Top, Small,
+0
+0
+0
+Custom
+CL-SB-12B-01_NDC
+
+CL-SB-12B-01T 
+0
+3
+3
+Custom
+CON_526100972_MOL
+
+526100972 
+0
+18
 9
 Custom
-DFN06033_SOT8013_NEX
+CUI_UJ2-MIBH-G-SMT-TR
 
-PMX100UNEZ 
+
 0
-3
-3
+9
+6
 Custom
-DIO_VEMD4110X01
+Filter_Murata_BNX025
+https://www.murata.com/en-us/products/productdata/8796778004510/QNFH9101.pdf?1496719830000
+EMI Filter
+0
+6
+4
+Custom
+GCT_BG300-02-X-X-A_REVC
 
 
 0
 2
 2
 Custom
-LPM0940
+GCT_BG300-03-X-X-A_REVC
 
 
-0
-0
-0
-Custom
-M1 hole
-
-
-0
-0
-0
-Custom
-SOT-323_SC-70 - thin
-SOT-323, SC-70
-SOT-323 SC-70
 0
 3
 3
 Custom
-VQFN40-RKP_TEX
+LTC4126-10
 
-LP5868RKPR 
+
 0
-40
-40
+13
+13
 Custom
-XC61G_USP-3_TOR
+POT_PV36W_MUR
 
-XC61GC3002HR-G 
+PV36W105C01B00 
+0
+3
+3
+Custom
+Photodiode
+
+
+0
+2
+2
+Custom
+RES_3550_TEC
+
+355047RJT 
+0
+2
+2
+Custom
+RES_SMF5_TYCO_TYC
+
+SMW547RJT 
+0
+2
+2
+Custom
+SOIC14_SL_MCH
+
+MCP6489-E/SL 
+0
+14
+14
+Custom
+Solder pads
+
+
+0
+2
+2
+Custom
+TENSILITY_54-00165
+
+
 0
 4
 3
 Custom
-YZB4_TEX
+XDCR_SFH_229
 
-CSD13201W10 
+
 0
-4
-3
+2
+2
 Custom
-heatsink
+mouse bite
+
+
+0
+0
+0
+Custom
+polarity
 
 
 0
