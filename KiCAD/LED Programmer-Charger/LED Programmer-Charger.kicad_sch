@@ -577,108 +577,6 @@
 				)
 			)
 		)
-		(symbol "Connector:TestPoint"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0.762) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "TP"
-				(at 0 6.858 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Value" "TestPoint"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 5.08 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "test point"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "test point tp"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Pin* Test*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "TestPoint_0_1"
-				(circle
-					(center 0 3.302)
-					(radius 0.762)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "TestPoint_1_1"
-				(pin passive line
-					(at 0 0 90)
-					(length 2.54)
-					(name "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Connector:USB_B_Micro"
 			(pin_names
 				(offset 1.016)
@@ -2042,6 +1940,203 @@
 				)
 			)
 		)
+		(symbol "Jumper:Jumper_3_Open"
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim yes)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "JP"
+				(at -2.54 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Jumper_3_Open"
+				(at 0 2.794 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Jumper, 3-pole, both open"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Jumper SPDT"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Jumper* TestPoint*3Pads* TestPoint*Bridge*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Jumper_3_Open_0_0"
+				(circle
+					(center -3.302 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 3.302 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Jumper_3_Open_0_1"
+				(arc
+					(start -0.254 1.016)
+					(mid -1.651 1.4992)
+					(end -3.048 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -0.508) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(arc
+					(start 3.048 1.016)
+					(mid 1.651 1.4992)
+					(end 0.254 1.016)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Jumper_3_Open_1_1"
+				(pin passive line
+					(at -6.35 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 6.35 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Serial-Basic-CH340C-and-USBC-eagle-import:CH340C"
 			(exclude_from_sim no)
 			(in_bom yes)
@@ -2847,8 +2942,16 @@
 		(uuid "3bf640cc-6248-4f12-9a68-119738e8ad0f")
 	)
 	(no_connect
+		(at 180.34 44.45)
+		(uuid "4a6dbb8a-6ea3-47ef-8482-44b60fb25d63")
+	)
+	(no_connect
 		(at 81.28 54.61)
 		(uuid "4c214aec-e81e-4d2c-a295-f74f5e71d9c7")
+	)
+	(no_connect
+		(at 167.64 53.34)
+		(uuid "604a457c-c555-42df-b0cc-6e5d29c45d8a")
 	)
 	(no_connect
 		(at 81.28 44.45)
@@ -2869,6 +2972,10 @@
 	(no_connect
 		(at 81.28 49.53)
 		(uuid "8f629d48-4408-448b-bed0-ec395611c732")
+	)
+	(no_connect
+		(at 180.34 41.91)
+		(uuid "b06a3919-2bf9-489f-b76b-ad4750c7bba2")
 	)
 	(no_connect
 		(at 81.28 46.99)
@@ -2901,6 +3008,16 @@
 			(type default)
 		)
 		(uuid "256ec131-83d2-4e05-b1b9-99b109213a13")
+	)
+	(wire
+		(pts
+			(xy 128.27 40.64) (xy 130.81 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31bc4eae-022a-405f-8e00-dfb19abb8c08")
 	)
 	(wire
 		(pts
@@ -2954,6 +3071,16 @@
 	)
 	(wire
 		(pts
+			(xy 128.27 41.91) (xy 128.27 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "91fe70ec-fca9-4a79-8aca-910d1c1c3df7")
+	)
+	(wire
+		(pts
 			(xy 81.28 39.37) (xy 88.9 39.37)
 		)
 		(stroke
@@ -2971,16 +3098,6 @@
 			(type solid)
 		)
 		(uuid "941d862a-09fd-477e-a388-3373676a093c")
-	)
-	(wire
-		(pts
-			(xy 96.52 39.37) (xy 111.76 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a4fb5eea-3740-45a9-8a38-a0ecf4ba1922")
 	)
 	(wire
 		(pts
@@ -3021,6 +3138,16 @@
 			(type solid)
 		)
 		(uuid "df822f6b-efe5-48c0-87c5-ed379a557504")
+	)
+	(wire
+		(pts
+			(xy 124.46 38.1) (xy 130.81 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e48172b1-161f-445a-afad-6c03e72ea69e")
 	)
 	(wire
 		(pts
@@ -3146,6 +3273,17 @@
 		)
 		(uuid "3f701b3b-71a4-4a23-8db8-feca6352a35e")
 	)
+	(label "UPDI"
+		(at 128.27 41.91 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6711ffe2-a6a7-4abc-baad-c168ddcd849f")
+	)
 	(label "D+"
 		(at 45.72 44.45 0)
 		(fields_autoplaced yes)
@@ -3169,7 +3307,7 @@
 		(uuid "7cafe4d6-d206-4643-9a08-725813775780")
 	)
 	(label "UPDI"
-		(at 97.79 39.37 0)
+		(at 96.52 39.37 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -3481,7 +3619,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 111.76 41.91 270)
+		(at 130.81 43.18 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3490,7 +3628,7 @@
 		(fields_autoplaced yes)
 		(uuid "18cc6981-6c0c-4866-8e8f-8530b71bb9a7")
 		(property "Reference" "#PWR06"
-			(at 105.41 41.91 0)
+			(at 124.46 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3499,7 +3637,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 108.5851 41.91 90)
+			(at 127.6351 43.18 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3508,7 +3646,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 111.76 41.91 0)
+			(at 130.81 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3517,7 +3655,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 111.76 41.91 0)
+			(at 130.81 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3526,7 +3664,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 111.76 41.91 0)
+			(at 130.81 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3829,7 +3967,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x04_Pin")
-		(at 116.84 39.37 180)
+		(at 135.89 40.64 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3837,7 +3975,7 @@
 		(dnp no)
 		(uuid "6907f051-8534-490e-b77c-82b84b8dc6c2")
 		(property "Reference" "TP4"
-			(at 111.506 28.702 0)
+			(at 130.556 29.972 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3846,7 +3984,7 @@
 			)
 		)
 		(property "Value" "UPDI Pogo Pads"
-			(at 104.902 30.734 0)
+			(at 123.952 32.004 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3855,7 +3993,7 @@
 			)
 		)
 		(property "Footprint" "Custom:1mm pad x4"
-			(at 116.84 39.37 0)
+			(at 135.89 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3864,7 +4002,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 116.84 39.37 0)
+			(at 135.89 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3873,7 +4011,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
-			(at 116.84 39.37 0)
+			(at 135.89 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3882,7 +4020,7 @@
 			)
 		)
 		(property "Manufacturer" "Mill-Max Manufacturing Corp."
-			(at 116.84 39.37 0)
+			(at 135.89 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3891,7 +4029,7 @@
 			)
 		)
 		(property "Part" "0985-0-15-20-71-14-11-0"
-			(at 116.84 39.37 0)
+			(at 135.89 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4004,6 +4142,71 @@
 			(project ""
 				(path "/a12a8214-6f80-45e7-9da5-b6cca6f4afcc"
 					(reference "D2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 120.65 31.75 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6dabd6fd-0346-41e4-b800-a27770b0b38c")
+		(property "Reference" "#PWR016"
+			(at 120.65 35.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 120.396 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 120.65 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.65 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 120.65 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4ab5eb0a-8889-4902-aa84-dbbc875a2c78")
+		)
+		(instances
+			(project "LED Programmer-Charger"
+				(path "/a12a8214-6f80-45e7-9da5-b6cca6f4afcc"
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -4164,91 +4367,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 167.64 53.34 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "7f152fff-b4bf-4ecc-afaf-1fe1da936996")
-		(property "Reference" "TP0"
-			(at 168.91 59.182 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 166.4279 58.039 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
-			(at 162.56 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 162.56 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 167.64 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 167.64 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part" ""
-			(at 167.64 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "74d5dda8-ca38-49b5-a380-181c72156c26")
-		)
-		(instances
-			(project "LED Programmer-Charger"
-				(path "/a12a8214-6f80-45e7-9da5-b6cca6f4afcc"
-					(reference "TP0")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:USB_B_Micro")
 		(at 24.13 44.45 0)
 		(unit 1)
@@ -4348,7 +4466,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 111.76 34.29 270)
+		(at 130.81 35.56 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4357,7 +4475,7 @@
 		(fields_autoplaced yes)
 		(uuid "8b978fb7-a2cf-4560-85ce-4a3c2b35eb11")
 		(property "Reference" "#PWR013"
-			(at 105.41 34.29 0)
+			(at 124.46 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4366,7 +4484,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 108.5851 34.29 90)
+			(at 127.6351 35.56 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4375,7 +4493,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 111.76 34.29 0)
+			(at 130.81 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4384,7 +4502,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 111.76 34.29 0)
+			(at 130.81 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4393,7 +4511,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 111.76 34.29 0)
+			(at 130.81 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4514,7 +4632,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 111.76 36.83 90)
+		(at 120.65 44.45 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -4523,7 +4641,7 @@
 		(fields_autoplaced yes)
 		(uuid "98586970-e719-47a0-84ef-8b3c2daecff5")
 		(property "Reference" "#PWRBATT0101"
-			(at 115.57 36.83 0)
+			(at 120.65 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4532,16 +4650,15 @@
 			)
 		)
 		(property "Value" "+Vbat"
-			(at 108.5851 36.83 90)
+			(at 120.65 48.5831 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
-			(at 111.76 36.83 0)
+			(at 120.65 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4550,7 +4667,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 111.76 36.83 0)
+			(at 120.65 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4559,7 +4676,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 111.76 36.83 0)
+			(at 120.65 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4568,7 +4685,7 @@
 			)
 		)
 		(property "Manufacturer" ""
-			(at 111.76 36.83 0)
+			(at 120.65 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4577,7 +4694,7 @@
 			)
 		)
 		(property "Part" ""
-			(at 111.76 36.83 0)
+			(at 120.65 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4592,91 +4709,6 @@
 			(project "LED Programmer-Charger"
 				(path "/a12a8214-6f80-45e7-9da5-b6cca6f4afcc"
 					(reference "#PWRBATT0101")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 180.34 44.45 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9b3972eb-080c-4300-b0d4-f9ab2c9a6f6f")
-		(property "Reference" "TP2"
-			(at 185.166 44.45 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 185.039 45.6621 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
-			(at 180.34 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 180.34 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 180.34 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 180.34 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part" ""
-			(at 180.34 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f396410c-fb9d-4609-8015-9b7181c0325f")
-		)
-		(instances
-			(project ""
-				(path "/a12a8214-6f80-45e7-9da5-b6cca6f4afcc"
-					(reference "TP2")
 					(unit 1)
 				)
 			)
@@ -5019,91 +5051,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint")
-		(at 180.34 41.91 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b9c66983-aa23-47a7-940e-09cde825bd83")
-		(property "Reference" "TP1"
-			(at 185.166 41.91 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TestPoint"
-			(at 185.039 43.1221 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
-			(at 180.34 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 180.34 46.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "test point"
-			(at 180.34 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" ""
-			(at 180.34 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Part" ""
-			(at 180.34 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "31d23e40-35a8-4836-8f58-115570ba9534")
-		)
-		(instances
-			(project "LED Programmer-Charger"
-				(path "/a12a8214-6f80-45e7-9da5-b6cca6f4afcc"
-					(reference "TP1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 43.18 50.8 180)
 		(unit 1)
@@ -5409,7 +5356,7 @@
 		(lib_id "Graphic:Logo_Open_Hardware_Small")
 		(at 36.83 74.93 0)
 		(unit 1)
-		(exclude_from_sim no)
+		(exclude_from_sim yes)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
@@ -5460,15 +5407,6 @@
 				(hide yes)
 			)
 		)
-		(property "Sim.Enable" "0"
-			(at 36.83 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
 		(property "Manufacturer" ""
 			(at 36.83 74.93 0)
 			(effects
@@ -5491,6 +5429,98 @@
 			(project ""
 				(path "/a12a8214-6f80-45e7-9da5-b6cca6f4afcc"
 					(reference "SYM1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Jumper:Jumper_3_Open")
+		(at 120.65 38.1 90)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e034698c-b0d3-4a8b-8705-b4be40c141e3")
+		(property "Reference" "JP1"
+			(at 118.5159 36.8878 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Jumper_3_Open"
+			(at 118.5159 39.3121 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-3_P2.0mm_Open_TrianglePad1.0x1.5mm"
+			(at 120.65 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 120.65 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Jumper, 3-pole, both open"
+			(at 120.65 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 120.65 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" ""
+			(at 120.65 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "6c3a30b5-e12d-4303-a9c7-137840d532c3")
+		)
+		(pin "1"
+			(uuid "f5316cc1-85a1-4b1d-b61c-cf454e83bb2c")
+		)
+		(pin "3"
+			(uuid "21a18965-0eff-4480-9810-838337361251")
+		)
+		(instances
+			(project ""
+				(path "/a12a8214-6f80-45e7-9da5-b6cca6f4afcc"
+					(reference "JP1")
 					(unit 1)
 				)
 			)
