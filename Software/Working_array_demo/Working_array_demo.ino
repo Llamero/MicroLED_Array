@@ -87,8 +87,7 @@ union BYTE16UNION
 
 void setup() {
   pinMode(6, INPUT);
-  pinMode(sensor, OUTPUT);
-  pinMode(SDA, INPUT_PULLUP);
+  pinMode(SDA, INPUT_PULLUP); //Needed to use internal pullups as I2C pullup
   pinMode(SCL, INPUT_PULLUP);
   // pinMode(SDA, OUTPUT);
   // while(true){
@@ -100,7 +99,7 @@ void setup() {
   //pinMode(vsync_pin, OUTPUT);
   //digitalWrite(vsync_pin, LOW);
   Wire.begin();
-  Wire.setClock(100000);
+  Wire.setClock(1e6);
   Wire.usePullups();
   delay(1);
 
@@ -131,7 +130,9 @@ void setup() {
   /* read example */
   //i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, chip_en_reg, i2cRead, 5, &tempData[0]); //e.g. read 5 bytes data from chip_en_reg register
   //setValuesOverSerial();
-  rain();
+  //rain();
+  //counterChase();
+  sensorMeter();
   //zigzag();
 }
 
@@ -158,9 +159,8 @@ uint16_t i2cSendReceive(uint8_t i2cTargetAddress, uint16_t startRegAddress, uint
         }
 
         Wire.beginTransmission(i2cTargetAddress);
-        for(i=0; i<dataLength+1; i++) Wire.write(gTxPacket[i]);
-        uint32_t error = Wire.endTransmission(); 
-        digitalWrite(sensor, HIGH);
+        Wire.write(gTxPacket, dataLength+1);
+        Wire.endTransmission(); 
     }
     else //i2c read
         /*
@@ -188,50 +188,11 @@ uint16_t i2cSendReceive(uint8_t i2cTargetAddress, uint16_t startRegAddress, uint
 #define wordsRow 16 //10 rows of LED dots to display the words
 #define wordsCol 8 //6 cols of LED dots to display the words
 
-void zigzag(){
-  int i, j, k;
-  uint8_t first_row;
-  uint8_t display[24];
-  bool dir = false;
-
-  for(i = 0; i < n_leds; i++) tempData[i] = 0x00;
-  i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &tempData[i]); //Max I2C length isdot_onoff0
-  for(i = 0; i < n_leds; i++) tempData[i] = 0xFF;
-  for(i = 0; i < n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dc0+i, i2cWrite, 31, &tempData[i]);
-  for(i=0; i<n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, pwm_bri0+i, i2cWrite, 31, &tempData[i]); //Max I2C length isdot_onoff0
-  k=7;
-  while(true){
-    for(i=7; i>0; i--){
-      for(j=2; j>=0; j--) display[i*3+j] = display[(i-1)*3+j]; //shift display down one row
-    } 
-    uint16Union.bytes_var = 1 << led_order[k];
-    display[0] = uint16Union.bytes[0];
-    display[1] = uint16Union.bytes[1];
-    i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &display[0]);
-    delay(30);
-    if(dir){
-      if(k==7){
-        dir = false;
-        k--;
-      }
-      else k++;
-    }
-    else{
-      if(k==0){
-        dir = true;
-        k++;
-      }
-      else k--;
-    }
-  }
-}
-
 void rain(){
   int i, j, k;
   uint8_t first_row;
   uint8_t display[24];
   const uint8_t inv_density = 9;
-  bool debug = false;
 
   for(i = 0; i < n_leds; i++) tempData[i] = 0x00;
   i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &tempData[i]); //Max I2C length isdot_onoff0
@@ -250,8 +211,88 @@ void rain(){
     display[0] = uint16Union.bytes[0];
     display[1] = uint16Union.bytes[1];
     i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &display[0]);
-    digitalWrite(sensor, debug);
-    debug = !debug;
     delay(20);
+  }
+}
+
+void counterChase(){
+  uint16_t adc;
+  int i, j, k;
+  uint8_t counter;
+  uint8_t display[24];
+  const uint8_t inv_density = 9;
+  bool debug = false;
+
+  for(i = 0; i < n_leds; i++) tempData[i] = 0x00;
+  i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &tempData[i]); //Max I2C length isdot_onoff0
+  for(i = 0; i < n_leds; i++) tempData[i] = 0xFF;
+  for(i = 0; i < n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dc0+i, i2cWrite, 31, &tempData[i]);
+  for(i=0; i<n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, pwm_bri0+i, i2cWrite, 31, &tempData[i]); //Max I2C length isdot_onoff0
+
+  while(true){
+    // adc = analogRead(sensor);
+    // adc >>= 6;
+    // adc = 64-adc;
+    adc++;
+    if(adc > 64) adc = 0;
+    counter = 0;
+    for(i=0; i<8; i++){
+      uint16Union.bytes_var = 0;
+      for(j=0; j<8; j++){
+        if(counter == adc) uint16Union.bytes_var += 1 << led_order[j];
+        counter++;
+      } 
+      display[i*3] = uint16Union.bytes[0]; //shift display down one row
+      display[i*3+1] = uint16Union.bytes[1]; //shift display down one row
+    }
+    i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &display[0]);
+    delay(100); 
+  }
+}
+
+void sensorMeter(){
+  uint16_t adc;
+  int i, j, k;
+  uint16_t counter;
+  uint16_t mask;
+  uint8_t display[24];
+  const uint8_t inv_density = 9;
+  bool debug = false;
+
+  pinMode(adc, INPUT);
+  for(i = 0; i < n_leds; i++) tempData[i] = 0x00;
+  i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &tempData[i]); //Max I2C length isdot_onoff0
+  for(i = 0; i < n_leds; i++) tempData[i] = 0xFF;
+  for(i = 0; i < n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dc0+i, i2cWrite, 31, &tempData[i]);
+  for(i=0; i<n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, pwm_bri0+i, i2cWrite, 31, &tempData[i]); //Max I2C length isdot_onoff0
+  for(i=0; i<24; i++) display[i] = 0;
+  while(true){
+    adc = analogRead(sensor);
+    adc>>=2;
+    adc -= 170;
+    adc = 64-adc;
+    counter = 0;
+    for(i=0; i<8; i++){
+      uint16Union.bytes_var = 0;
+      for(j=0; j<8; j++){
+        if(counter <= adc) uint16Union.bytes_var += 1 << led_order[j];
+        counter++;
+      } 
+      display[i*3] = uint16Union.bytes[0]; //shift display down one row
+      display[i*3+1] = uint16Union.bytes[1]; //shift display down one row
+    }
+
+    //Show binary value
+    // for(i=0; i<2; i++){
+    //   uint16Union.bytes_var = 0;
+    //   for(j=0; j<8; j++){
+    //     mask = 1 << j + i*8;
+    //     if(adc & mask) uint16Union.bytes_var += 1 << led_order[j];
+    //   } 
+    //   display[i*3] = uint16Union.bytes[0]; //shift display down one row
+    //   display[i*3+1] = uint16Union.bytes[1]; //shift display down one row
+    // }
+    i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &display[0]);
+    delay(100); 
   }
 }
