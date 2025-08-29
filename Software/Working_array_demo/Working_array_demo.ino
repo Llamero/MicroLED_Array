@@ -9,7 +9,10 @@ uint8_t tempData[396]; //store the data to write
 #define i2cWrite 0x00
 #define i2cRead 0x01
 #define i2c_pullup_pin 7
-#define vsync_pin 5
+#define vsync_pin 10
+#define SCL 9
+#define SDA 8
+#define sensor 4
 
 /* Data sent to the Target */
 uint8_t gTxPacket[396];
@@ -83,12 +86,22 @@ union BYTE16UNION
 }uint16Union;
 
 void setup() {
-  Serial.begin(9600);
-  pinMode(i2c_pullup_pin, OUTPUT);
-  digitalWrite(i2c_pullup_pin, HIGH);
-  pinMode(vsync_pin, OUTPUT);
-  digitalWrite(vsync_pin, LOW);
+  pinMode(6, INPUT);
+  pinMode(sensor, OUTPUT);
+  pinMode(SDA, INPUT_PULLUP);
+  pinMode(SCL, INPUT_PULLUP);
+  // pinMode(SDA, OUTPUT);
+  // while(true){
+  //   digitalWrite(SDA, HIGH);
+  //   delay(1);
+  //   digitalWrite(SDA, LOW);
+  //   delay(1);
+  // }
+  //pinMode(vsync_pin, OUTPUT);
+  //digitalWrite(vsync_pin, LOW);
   Wire.begin();
+  Wire.setClock(100000);
+  Wire.usePullups();
   delay(1);
 
   /* reset device */
@@ -106,7 +119,7 @@ void setup() {
   tempData[0] = B01111000; //data to Dev_initial register, 11 max_line_num (default), set mode 1, 125kHz pwm_fre (default)
   tempData[1] = B00000100; //data to Dev_config1 register, 1us sw_blk (default), enable exponential scale dimming curve, phase shift off (default), cs_on_shift off (default)
   tempData[2] = B00000001; //data to Dev_config2 register, comp_group3/2/1 off (default), lod_removal disable (defualt), enable lsd_removal
-  tempData[3] = B11110011; //data to Dev_config3 register, weak down deghost (default), vled-2v up deghost (default), 15mA maximum current (default), enable up deghost (default)
+  tempData[3] = B11110001; //data to Dev_config3 register, weak down deghost (default), vled-2v up deghost (default), 15mA maximum current (default), enable up deghost (default)
                            // Current: 000 = 7.5 mA, 001 = 12.5 mA, 010 = 25 mA, 011 = 37.5 mA, 100 = 50 mA, 101 = 75 mA, 110 = 100 mA
 
   //Turn off deghost
@@ -136,7 +149,6 @@ uint16_t i2cSendReceive(uint8_t i2cTargetAddress, uint16_t startRegAddress, uint
                                                                                     //with the 5 bits device address
     gTxPacket[0] = (uint8_t) startRegAddress; //get the lower 8 bits of the startRegAddress
     gRxCount = 0;
-
     if(writeOrRead == i2cWrite) //i2c write
     {
         gTxLen = dataLength + 1; //take the startRegAddress into account
@@ -146,8 +158,9 @@ uint16_t i2cSendReceive(uint8_t i2cTargetAddress, uint16_t startRegAddress, uint
         }
 
         Wire.beginTransmission(i2cTargetAddress);
-        Wire.write(gTxPacket, dataLength+1);
-        Wire.endTransmission(); 
+        for(i=0; i<dataLength+1; i++) Wire.write(gTxPacket[i]);
+        uint32_t error = Wire.endTransmission(); 
+        digitalWrite(sensor, HIGH);
     }
     else //i2c read
         /*
@@ -218,6 +231,7 @@ void rain(){
   uint8_t first_row;
   uint8_t display[24];
   const uint8_t inv_density = 9;
+  bool debug = false;
 
   for(i = 0; i < n_leds; i++) tempData[i] = 0x00;
   i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &tempData[i]); //Max I2C length isdot_onoff0
@@ -236,60 +250,8 @@ void rain(){
     display[0] = uint16Union.bytes[0];
     display[1] = uint16Union.bytes[1];
     i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &display[0]);
+    digitalWrite(sensor, debug);
+    debug = !debug;
     delay(20);
   }
-}
-
-
-void setValuesOverSerial()
-{
-  uint16_t i, j, k;
-  uint16_t coord[] = {0,0};
-  //Set global brightness to 0
-  //tempData[0] = 0;
-  //i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT,global_bri, i2cWrite, 1, &tempData[0]);
-  //Set all individual PWM to 255
-  for(i = 0; i < n_leds; i++) tempData[i] = 0x00;
-  i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &tempData[i]); //Max I2C length isdot_onoff0
-  for(i = 0; i < n_leds; i++) tempData[i] = 0xFF;
-  for(i = 0; i < n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dc0+i, i2cWrite, 31, &tempData[i]);
-  for(i=0; i<n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, pwm_bri0+i, i2cWrite, 31, &tempData[i]); //Max I2C length isdot_onoff0
-
-  while(true){
-    if(Serial.available()){
-      i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0+coord[0], i2cWrite, 2, 0);
-      recvWithEndMarker(coord); //Get new coordinate
-      coord[0] *= 3; //The rows increment in blocks of 3 bytes
-      uint16Union.bytes_var = 1 << led_order[coord[1]]; //Shift the bit to the correct column
-      i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0+coord[0], i2cWrite, 2, uint16Union.bytes);
-    } 
-  }
-}
-
-void recvWithEndMarker(uint16_t *result_array) {
-    uint8_t ndx = 0;
-    uint8_t result_index = 0;
-    char endMarker = '\n';
-    char rc;
-    const byte numChars = 32;
-    char receivedChars[numChars];   // an array to store the received data
-    
-    while (Serial.available() > 0) {
-        rc = Serial.read();
-
-        if (rc != endMarker && rc != ',' && rc != ' ') {
-            receivedChars[ndx] = rc;
-            ndx++;
-            if (ndx >= numChars) {
-                ndx = numChars - 1;
-            }
-        }
-        else {
-            receivedChars[ndx] = '\0'; // terminate the string
-            result_array[result_index] = atoi(receivedChars);
-            ndx = 0;
-            result_index++;
-            if (rc == endMarker) return;
-        }
-    }
 }
