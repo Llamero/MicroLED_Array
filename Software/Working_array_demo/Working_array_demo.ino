@@ -1,18 +1,27 @@
 #include <Wire.h>
+#include <elapsedMillis.h>
+#include <Comparator.h>
 
 uint16_t readDataNum; //store the number of read data
 uint16_t startRegAddress; //the start address to write or read from
-uint16_t i;
 uint8_t tempData[396]; //store the data to write
-
+uint16_t adc; //General adc value variable
+uint8_t sensor_baseline; //The baseline voltage the photodiode is at when there is only background illumination
+const int baseline_offset = 2; //How much to subtract from the measured baseline to stop false triggering
+elapsedMicros interrupt_timer; //Timer for duration of sensor interrupt
+elapsedMillis timer;  //General ms timer for messages and timeouts
+elapsedMicros timeout_timer; //Timer for checking if communication has timed out
+const uint16_t comm_timeout = 50000; //How many milliseconds to wait for a full data stream to complete before timing out 
+volatile uint32_t interrupt_duration; //How long the comparator was low (IR LED on)
+volatile uint8_t sensor_state; //WHether the comparator output is high or low
+uint16_t led_on_duration; //How long an IR LED pulse is to indicate an LED is to be turned on
+const uint16_t start_com_duration = 200;
 //I2C
 #define i2cWrite 0x00
 #define i2cRead 0x01
-#define i2c_pullup_pin 7
 #define vsync_pin 10
-#define SCL 9
-#define SDA 8
 #define sensor 4
+#define output_pin 1
 
 /* Data sent to the Target */
 uint8_t gTxPacket[396];
@@ -85,23 +94,40 @@ union BYTE16UNION
  uint8_t bytes[2];
 }uint16Union;
 
+void ac_interrupt() //Comparator interrupt
+{
+  if (Comparator0.read()){ //When comparator is high
+    sensor_state = 1;
+    interrupt_duration = interrupt_timer;
+  }
+  else{ //When comparator is low
+    sensor_state = 2;
+    interrupt_timer = 0;
+  }
+}
+
+// ISR(PORTA_PORT_vect) { //Output pin interrupt
+//   if (PORTA.INTFLAGS & PIN5_bm) {
+//     bool current_state = (PORTA.IN & PIN5_bm);
+//     if (current_state) interrupt_duration = interrupt_timer; //When pin is high
+//     else interrupt_timer = 0; //Reset interrupt timer //When pin is low
+//     PORTA.INTFLAGS = PIN5_bm; // Clear the interrupt flag for PB3
+//   }
+// }
+
 void setup() {
-  pinMode(6, INPUT);
+  uint8_t i;
+
+  //Initialize I2C
+  pinMode(6, INPUT); //Pin 6 is connected to Gnd to set it to input
   pinMode(SDA, INPUT_PULLUP); //Needed to use internal pullups as I2C pullup
   pinMode(SCL, INPUT_PULLUP);
-  // pinMode(SDA, OUTPUT);
-  // while(true){
-  //   digitalWrite(SDA, HIGH);
-  //   delay(1);
-  //   digitalWrite(SDA, LOW);
-  //   delay(1);
-  // }
-  //pinMode(vsync_pin, OUTPUT);
-  //digitalWrite(vsync_pin, LOW);
   Wire.begin();
   Wire.setClock(1e6);
   Wire.usePullups();
-  delay(1);
+
+  //Get sensor baseline
+  sensor_baseline = measureSensorBaseline();
 
   /* reset device */
   startRegAddress = reset_reg;
@@ -132,11 +158,71 @@ void setup() {
   //setValuesOverSerial();
   //rain();
   //counterChase();
-  sensorMeter();
+  //sensorMeter();
   //zigzag();
+  //comparatorTest();
+  pinMode(sensor, INPUT);
+  for(i = 0; i < n_leds; i++) tempData[i] = 0x00;
+  i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &tempData[i]); //Max I2C length isdot_onoff0
+  for(i = 0; i < n_leds; i++) tempData[i] = 0x5F;
+  for(i = 0; i < n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dc0+i, i2cWrite, 31, &tempData[i]);
+  for(i=0; i<n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, pwm_bri0+i, i2cWrite, 31, &tempData[i]); //Max I2C length isdot_onoff0
+  startComparator();
 }
 
 void loop() {
+  uint16_t i, j;
+  uint8_t display[24];
+  uint8_t nec_byte[16];
+  bool nec_valid;
+
+  while(sensor_state != 2); //Wait for the start of a communication
+  while(sensor_state != 1 || interrupt_duration < start_com_duration); //Wait for LED to go low again
+  interrupt_duration = 0;
+  while(!interrupt_duration); //Wait for first timing pulse
+  led_on_duration = interrupt_duration>>1; //Record the duration of the first pulse, as this indicated the LED-on duration
+  for(i=0; i<24; i++) display[i] = 0; //Zero out the display array
+  timeout_timer = 0;
+  interrupt_duration = 0;
+  for(i=0; i<n_rows*2 && timeout_timer < comm_timeout; i++){ //2 bytes per row for NEC IR encoding
+    nec_byte[i] = 0;
+    for(j=0; j<8 && timeout_timer < comm_timeout;){
+      if(sensor_state == 1 && interrupt_duration){
+        if(interrupt_duration > led_on_duration) nec_byte[i] += 1 << j;
+        interrupt_duration = 0; //Reset interrupt duration
+        timeout_timer = 0; //Reset timout timer
+        j++; //Increment index
+      }
+    }
+  }
+  nec_valid = true;
+  for(i=0; i<n_rows*2 && nec_valid; i+=2){ //Verify that NEC encoding is valid
+    nec_byte[i+1] ^= nec_byte[i];
+    if(nec_byte[i+1] != 0xFF) nec_valid = false;
+  }
+  if(i<n_rows*2 || j<8 || !nec_valid){ //If an error happened during communication
+    for(i=0; i<24; i++) display[i] = 0; //Zero out the display array
+    // for(i=0; i<n_rows; i++){
+    //   uint16Union.bytes_var = 0;
+    //   for(j=0; j<8; j++){
+    //     if(nec_byte[i] & 1 << j) uint16Union.bytes_var += 1 << led_order[j];
+    //   }
+    //   display[i*3] = uint16Union.bytes[0]; //shift display down one row
+    //   display[i*3+1] = uint16Union.bytes[1]; //shift display down one row
+    // }
+    display[1] = 1; //Turn on red error LED
+  }
+  else{
+    for(i=0; i<n_rows; i++){
+      uint16Union.bytes_var = 0;
+      for(j=0; j<8; j++){
+        if(nec_byte[i*2] & 1 << j) uint16Union.bytes_var += 1 << led_order[j];
+      }
+      display[i*3] = uint16Union.bytes[0]; //shift display down one row
+      display[i*3+1] = uint16Union.bytes[1]; //shift display down one row
+    } 
+  }
+  i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &display[0]);
 }
 
 ///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C
@@ -182,15 +268,95 @@ uint16_t i2cSendReceive(uint8_t i2cTargetAddress, uint16_t startRegAddress, uint
     }
     return gRxCount;
 }
+///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM
+uint8_t measureSensorBaseline(){
+  uint8_t i;
+  adc = 0;
+  for(i=0; i<8; i++){
+    adc += analogRead(sensor);
+    delay(100);
+  }
+  adc >>= 5;
+  return adc; 
+}
+
+//https://github.com/SpenceKonde/megaTinyCore/tree/master/megaavr/libraries/Comparator
+//https://github.com/grughuhler/attiny/blob/main/attiny_ac/attiny_ac.ino
+void startComparator(){
+  sensor_baseline = 255;
+  pinMode(output_pin, OUTPUT);
+  Comparator.input_p = comparator::in_p::in1;       // pos input PA7.  See datasheet
+  Comparator.input_n = comparator::in_n::dacref;    // neg pin to the DACREF voltage
+  Comparator.reference = comparator::ref::vref_vdd; // Set the DACREF voltage
+  Comparator.dacref = sensor_baseline;
+
+  Comparator.hysteresis = comparator::hyst::large;  // Use 50mV hysteresis
+  Comparator.output = comparator::out::enable;      // Enable output PB3
+  Comparator.output_initval = comparator::out::init_high; // Output pin high after initialization
+  Comparator.attachInterrupt(ac_interrupt, CHANGE);
+  Comparator.init();
+  Comparator.start();
+  while(!Comparator0.read()){
+    AC0.DACREF = sensor_baseline--;
+    delay(10);
+  }
+  sensor_baseline -= baseline_offset;
+  AC0.DACREF = sensor_baseline;
+  sensor_state = 1;  //Set state to active
+}
+
+void stopComparator(){
+  Comparator.detachInterrupt();
+  Comparator.stop(true); // Stop comparator. Digital input on the pins that this comparator was using will be re-enabled.
+  sensor_state = 0; //Set state to standby
+}
+
 
 ///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS
 #define wordsNum 8  //8 words to display in wordRollingPlayback pattern
 #define wordsRow 16 //10 rows of LED dots to display the words
 #define wordsCol 8 //6 cols of LED dots to display the words
 
+void comparatorTest(){
+  int i, j, k;
+  uint16_t counter;
+  uint16_t mask;
+  uint8_t display[24];
+  uint8_t duration;
+  
+  pinMode(sensor, INPUT);
+  for(i = 0; i < n_leds; i++) tempData[i] = 0x00;
+  i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &tempData[i]); //Max I2C length isdot_onoff0
+  for(i = 0; i < n_leds; i++) tempData[i] = 0xFF;
+  for(i = 0; i < n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dc0+i, i2cWrite, 31, &tempData[i]);
+  for(i=0; i<n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, pwm_bri0+i, i2cWrite, 31, &tempData[i]); //Max I2C length isdot_onoff0
+  for(i=0; i<24; i++) display[i] = 0;
+  startComparator();
+  while(true){
+    if(sensor_state == 1){
+      duration = interrupt_duration>>2;
+      counter = 0;
+      for(i=0; i<8; i++){
+        uint16Union.bytes_var = 0;
+        for(j=0; j<8; j++){
+          if(counter == duration) uint16Union.bytes_var += 1 << led_order[j];
+          counter++;
+        } 
+        display[i*3] = uint16Union.bytes[0]; //shift display down one row
+        display[i*3+1] = uint16Union.bytes[1]; //shift display down one row
+      }
+    }
+    else{
+      for(i=0; i<24; i++) display[i] = 0;
+      display[0] = 256;
+    }
+    i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &display[0]);
+  }
+
+}
+
 void rain(){
   int i, j, k;
-  uint8_t first_row;
   uint8_t display[24];
   const uint8_t inv_density = 9;
 
@@ -220,8 +386,6 @@ void counterChase(){
   int i, j, k;
   uint8_t counter;
   uint8_t display[24];
-  const uint8_t inv_density = 9;
-  bool debug = false;
 
   for(i = 0; i < n_leds; i++) tempData[i] = 0x00;
   i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &tempData[i]); //Max I2C length isdot_onoff0
@@ -259,7 +423,7 @@ void sensorMeter(){
   const uint8_t inv_density = 9;
   bool debug = false;
 
-  pinMode(adc, INPUT);
+  pinMode(sensor, INPUT);
   for(i = 0; i < n_leds; i++) tempData[i] = 0x00;
   i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &tempData[i]); //Max I2C length isdot_onoff0
   for(i = 0; i < n_leds; i++) tempData[i] = 0xFF;
