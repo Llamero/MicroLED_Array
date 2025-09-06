@@ -1,6 +1,11 @@
+//This code can be run as low as 8 MHz to reduce power consumption
+
 #include <Wire.h>
 #include <elapsedMillis.h>
 #include <Comparator.h>
+#include <avr/sleep.h>
+#include <avr/interrupt.h>
+#include <avr/io.h>
 
 uint16_t readDataNum; //store the number of read data
 uint16_t startRegAddress; //the start address to write or read from
@@ -106,28 +111,37 @@ void ac_interrupt() //Comparator interrupt
   }
 }
 
-// ISR(PORTA_PORT_vect) { //Output pin interrupt
-//   if (PORTA.INTFLAGS & PIN5_bm) {
-//     bool current_state = (PORTA.IN & PIN5_bm);
-//     if (current_state) interrupt_duration = interrupt_timer; //When pin is high
-//     else interrupt_timer = 0; //Reset interrupt timer //When pin is low
-//     PORTA.INTFLAGS = PIN5_bm; // Clear the interrupt flag for PB3
-//   }
-// }
-
 void setup() {
   uint8_t i;
 
+  sei();  // Enable global interrupts
+  
+  // Disable ADC, USART, SPI, internal timers, RTC, and watchdog timer since they aren't used
+  ADC0.CTRLA &= ~ADC_ENABLE_bm;
+  USART0.CTRLA = 0;
+  USART1.CTRLA = 0;
+  SPI0.CTRLA = 0;
+  WDT.CTRLA = 0;
+  TCA0.SINGLE.CTRLA &= ~(1 << TCA_SINGLE_ENABLE_bp); // Disable Timer/Counter Type A (TCA0)
+  TCB0.CTRLA &= ~(1 << TCB_ENABLE_bp);
+  RTC.PITCTRLA = 0; //Disable RTC interrupts
+  RTC.CTRLA = 0; //Disable RTC 
+  //TCB1.CTRLA &= ~(1 << TCB_ENABLE_bp);
+ 
+  //Set all unused pins to poutput LOW to reduce power soncumption
+  for(i=0; i<18; i++){
+    if(i != 4 || i != 8 || i != 9 || i != 17){
+      pinMode(i, OUTPUT);
+      digitalWrite(i, LOW);
+    }
+  }
+
   //Initialize I2C
-  pinMode(6, INPUT); //Pin 6 is connected to Gnd to set it to input
   pinMode(SDA, INPUT_PULLUP); //Needed to use internal pullups as I2C pullup
   pinMode(SCL, INPUT_PULLUP);
   Wire.begin();
   Wire.setClock(1e6);
   Wire.usePullups();
-
-  //Get sensor baseline
-  sensor_baseline = measureSensorBaseline();
 
   /* reset device */
   startRegAddress = reset_reg;
@@ -141,7 +155,7 @@ void setup() {
   delayMicroseconds(100); //wait for t_chip_en (max 100us) to enter normal mode
   /* initialize device */
   startRegAddress = dev_initial;
-  tempData[0] = B01111000; //data to Dev_initial register, 11 max_line_num (default), set mode 1, 125kHz pwm_fre (default)
+  tempData[0] = B01111010; //data to Dev_initial register, 11 max_line_num (default), set mode 1, 125kHz pwm_fre (default)
   tempData[1] = B00000100; //data to Dev_config1 register, 1us sw_blk (default), enable exponential scale dimming curve, phase shift off (default), cs_on_shift off (default)
   tempData[2] = B00000001; //data to Dev_config2 register, comp_group3/2/1 off (default), lod_removal disable (defualt), enable lsd_removal
   tempData[3] = B11110001; //data to Dev_config3 register, weak down deghost (default), vled-2v up deghost (default), 15mA maximum current (default), enable up deghost (default)
@@ -168,15 +182,24 @@ void setup() {
   for(i = 0; i < n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dc0+i, i2cWrite, 31, &tempData[i]);
   for(i=0; i<n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, pwm_bri0+i, i2cWrite, 31, &tempData[i]); //Max I2C length isdot_onoff0
   startComparator();
+  tempData[0] = 0x00; //Disable chip
+  i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, chip_en_reg, i2cWrite, 1, &tempData[0]);
 }
 
 void loop() {
   uint16_t i, j;
   uint8_t display[24];
   uint8_t nec_byte[16];
-  bool nec_valid;
+  bool nec_valid; //Whether the NEC encoding is correct
+  bool blank_display; //Whether any pixels are on in the frame
 
-  while(sensor_state != 2); //Wait for the start of a communication
+  set_sleep_mode(SLEEP_MODE_STANDBY);  // Lower power than idle, retains AC
+  sleep_enable();
+  sleep_cpu(); // Device goes to sleep here, wakes on AC interrupt
+  sleep_disable(); // Disable after wake (optional)
+  tempData[0] = 0x01; //data to Chip_en register, enable chip
+  i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, chip_en_reg, i2cWrite, 1, &tempData[0]);
+  //while(sensor_state != 2); //Wait for the start of a communication
   while(sensor_state != 1 || interrupt_duration < start_com_duration); //Wait for LED to go low again
   interrupt_duration = 0;
   while(!interrupt_duration); //Wait for first timing pulse
@@ -196,21 +219,16 @@ void loop() {
     }
   }
   nec_valid = true;
+  blank_display = true;
   for(i=0; i<n_rows*2 && nec_valid; i+=2){ //Verify that NEC encoding is valid
     nec_byte[i+1] ^= nec_byte[i];
     if(nec_byte[i+1] != 0xFF) nec_valid = false;
+    if(nec_byte[i]) blank_display = false;
   }
-  if(i<n_rows*2 || j<8 || !nec_valid){ //If an error happened during communication
+  if(i<n_rows*2 || j<8 || !nec_valid || blank_display){ //If an error happened during communication
     for(i=0; i<24; i++) display[i] = 0; //Zero out the display array
-    // for(i=0; i<n_rows; i++){
-    //   uint16Union.bytes_var = 0;
-    //   for(j=0; j<8; j++){
-    //     if(nec_byte[i] & 1 << j) uint16Union.bytes_var += 1 << led_order[j];
-    //   }
-    //   display[i*3] = uint16Union.bytes[0]; //shift display down one row
-    //   display[i*3+1] = uint16Union.bytes[1]; //shift display down one row
-    // }
-    display[1] = 1; //Turn on red error LED
+    display[1] |= 1; //Turn on red indicator LED 
+    blank_display = true;
   }
   else{
     for(i=0; i<n_rows; i++){
@@ -220,9 +238,19 @@ void loop() {
       }
       display[i*3] = uint16Union.bytes[0]; //shift display down one row
       display[i*3+1] = uint16Union.bytes[1]; //shift display down one row
-    } 
+    }
+    display[1] |= 1; //Turn on red indicator LED 
   }
   i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &display[0]);
+  PORTC.OUTSET = PIN0_bm;
+  delayMicroseconds(10);
+  PORTC.OUTCLR = PIN0_bm;
+  delayMicroseconds(100);
+  if(blank_display){ //Disable chip if all LEDs are off
+    tempData[0] = 0x00; //data to Chip_en register, enable chip
+    i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, chip_en_reg, i2cWrite, 1, &tempData[0]);
+    delayMicroseconds(100);
+  }
 }
 
 ///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C
@@ -269,21 +297,12 @@ uint16_t i2cSendReceive(uint8_t i2cTargetAddress, uint16_t startRegAddress, uint
     return gRxCount;
 }
 ///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM///////////////////nIR COMM
-uint8_t measureSensorBaseline(){
-  uint8_t i;
-  adc = 0;
-  for(i=0; i<8; i++){
-    adc += analogRead(sensor);
-    delay(100);
-  }
-  adc >>= 5;
-  return adc; 
-}
 
 //https://github.com/SpenceKonde/megaTinyCore/tree/master/megaavr/libraries/Comparator
 //https://github.com/grughuhler/attiny/blob/main/attiny_ac/attiny_ac.ino
 void startComparator(){
   sensor_baseline = 255;
+
   pinMode(output_pin, OUTPUT);
   Comparator.input_p = comparator::in_p::in1;       // pos input PA7.  See datasheet
   Comparator.input_n = comparator::in_n::dacref;    // neg pin to the DACREF voltage
@@ -294,6 +313,7 @@ void startComparator(){
   Comparator.output = comparator::out::enable;      // Enable output PB3
   Comparator.output_initval = comparator::out::init_high; // Output pin high after initialization
   Comparator.attachInterrupt(ac_interrupt, CHANGE);
+  AC0.CTRLA |= AC_RUNSTDBY_bm;  //Allow the comparator to run when the microcontroller is in idle
   Comparator.init();
   Comparator.start();
   while(!Comparator0.read()){
