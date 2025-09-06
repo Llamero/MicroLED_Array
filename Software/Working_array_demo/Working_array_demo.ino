@@ -109,6 +109,7 @@ void ac_interrupt() //Comparator interrupt
     sensor_state = 2;
     interrupt_timer = 0;
   }
+  AC0.STATUS = AC_CMP_bm; //Clear the interrupt flag
 }
 
 void setup() {
