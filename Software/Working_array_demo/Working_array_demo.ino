@@ -101,6 +101,7 @@ union BYTE16UNION
 
 void ac_interrupt() //Comparator interrupt
 {
+  AC0.STATUS = AC_CMP_bm; //Clear the interrupt flag
   if (Comparator0.read()){ //When comparator is high
     sensor_state = 1;
     interrupt_duration = interrupt_timer;
@@ -109,7 +110,6 @@ void ac_interrupt() //Comparator interrupt
     sensor_state = 2;
     interrupt_timer = 0;
   }
-  AC0.STATUS = AC_CMP_bm; //Clear the interrupt flag
 }
 
 void setup() {
@@ -126,7 +126,10 @@ void setup() {
   TCA0.SINGLE.CTRLA &= ~(1 << TCA_SINGLE_ENABLE_bp); // Disable Timer/Counter Type A (TCA0)
   TCB0.CTRLA &= ~(1 << TCB_ENABLE_bp);
   RTC.PITCTRLA = 0; //Disable RTC interrupts
-  RTC.CTRLA = 0; //Disable RTC 
+  RTC.CTRLA = 0; //Disable RTC
+  // RTC.PITINTCTRL = RTC_PI_bm;             // Enable PIT interrupt
+  // RTC.PITCTRLA = RTC_PERIOD_CYC64_gc      // 64 cycles = ~8 ms
+  //               | RTC_PITEN_bm;           // Enable PIT
   //TCB1.CTRLA &= ~(1 << TCB_ENABLE_bp);
  
   //Set all unused pins to poutput LOW to reduce power soncumption
@@ -201,9 +204,11 @@ void loop() {
   tempData[0] = 0x01; //data to Chip_en register, enable chip
   i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, chip_en_reg, i2cWrite, 1, &tempData[0]);
   //while(sensor_state != 2); //Wait for the start of a communication
-  while(sensor_state != 1 || interrupt_duration < start_com_duration); //Wait for LED to go low again
+  timeout_timer = 0;
+  while((sensor_state != 1 || interrupt_duration < start_com_duration) && timeout_timer < comm_timeout); //Wait for LED to go low again
   interrupt_duration = 0;
-  while(!interrupt_duration); //Wait for first timing pulse
+  timeout_timer = 0;
+  while(!interrupt_duration && timeout_timer < comm_timeout); //Wait for first timing pulse
   led_on_duration = interrupt_duration>>1; //Record the duration of the first pulse, as this indicated the LED-on duration
   for(i=0; i<24; i++) display[i] = 0; //Zero out the display array
   timeout_timer = 0;
@@ -310,11 +315,13 @@ void startComparator(){
   Comparator.reference = comparator::ref::vref_vdd; // Set the DACREF voltage
   Comparator.dacref = sensor_baseline;
 
-  Comparator.hysteresis = comparator::hyst::large;  // Use 50mV hysteresis
-  Comparator.output = comparator::out::enable;      // Enable output PB3
+  Comparator.hysteresis = comparator::hyst::medium;  // Use 50mV hysteresis
+  Comparator.output = comparator::out::disable;      // Enable output PB3
   Comparator.output_initval = comparator::out::init_high; // Output pin high after initialization
   Comparator.attachInterrupt(ac_interrupt, CHANGE);
   AC0.CTRLA |= AC_RUNSTDBY_bm;  //Allow the comparator to run when the microcontroller is in idle
+  AC0.CTRLA |= AC_LPMODE_bm; //Allow the comparator to run in low-power mode with the cost of a slower propagation
+  AC0.CTRLA &= ~(AC_OUTEN_bm); //Disable output
   Comparator.init();
   Comparator.start();
   while(!Comparator0.read()){
