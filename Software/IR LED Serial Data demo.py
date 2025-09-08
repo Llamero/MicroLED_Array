@@ -3,6 +3,11 @@ import subprocess
 import time
 import sys
 
+prefix_pulse = 250;
+long_pulse = 100
+short_pulse = round(long_pulse/10)
+inter_pulse = long_pulse
+suffix_pulse = prefix_pulse
 PIN = 26  # BCM GPIO 19 = Physical Pin 35
 
 # 5x8 font subset for needed characters
@@ -101,10 +106,7 @@ def bytes_to_bits(byte_data):
 def create_encoded_wave(pi, pin, data_bytes):
     bits = bytes_to_bits(data_bytes)
     pulses = []
-    long_pulse = 100
-    short_pulse = round(long_pulse/10)
-    inter_pulse = 100
-    pulses.append(pigpio.pulse(1 << pin, 0, 250)) #Com start pulse
+    pulses.append(pigpio.pulse(1 << pin, 0, prefix_pulse)) #Com start pulse
     pulses.append(pigpio.pulse(0, 1 << pin, inter_pulse))
     pulses.append(pigpio.pulse(1 << pin, 0, long_pulse)) #Com timing pulse
     pulses.append(pigpio.pulse(0, 1 << pin, inter_pulse))
@@ -114,7 +116,7 @@ def create_encoded_wave(pi, pin, data_bytes):
         pulses.append(pigpio.pulse(1 << pin, 0, pulse_length))
         # LOW period after each bit (e.g. 10 µs gap)
         pulses.append(pigpio.pulse(0, 1 << pin, inter_pulse))
-    pulses.append(pigpio.pulse(0, 1 << pin, 10000))
+    pulses.append(pigpio.pulse(0, 1 << pin, suffix_pulse))
     pi.wave_clear()
     pi.wave_add_generic(pulses)
     wave_id = pi.wave_create()

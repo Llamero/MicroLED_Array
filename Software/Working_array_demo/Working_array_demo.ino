@@ -182,7 +182,7 @@ void setup() {
   pinMode(sensor, INPUT);
   for(i = 0; i < n_leds; i++) tempData[i] = 0x00;
   i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &tempData[i]); //Max I2C length isdot_onoff0
-  for(i = 0; i < n_leds; i++) tempData[i] = 0x5F;
+  for(i = 0; i < n_leds; i++) tempData[i] = 0xFF;
   for(i = 0; i < n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dc0+i, i2cWrite, 31, &tempData[i]);
   for(i=0; i<n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, pwm_bri0+i, i2cWrite, 31, &tempData[i]); //Max I2C length isdot_onoff0
   startComparator();
