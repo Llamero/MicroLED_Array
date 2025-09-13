@@ -10,17 +10,22 @@
 uint16_t readDataNum; //store the number of read data
 uint16_t startRegAddress; //the start address to write or read from
 uint8_t tempData[396]; //store the data to write
+uint8_t display[24]; //store the display bytes
 uint16_t adc; //General adc value variable
 uint8_t sensor_baseline; //The baseline voltage the photodiode is at when there is only background illumination
 const int baseline_offset = 2; //How much to subtract from the measured baseline to stop false triggering
 elapsedMicros interrupt_timer; //Timer for duration of sensor interrupt
 elapsedMillis timer;  //General ms timer for messages and timeouts
 elapsedMicros timeout_timer; //Timer for checking if communication has timed out
-const uint16_t comm_timeout = 50000; //How many milliseconds to wait for a full data stream to complete before timing out 
+const uint32_t wake_timeout = 3e6; //How many microseconds to wait for a wake command to complete before timing out 
+const uint16_t comm_timeout = 1000; //How many microseconds to wait for a full data stream to complete before timing out 
 volatile uint32_t interrupt_duration; //How long the comparator was low (IR LED on)
 volatile uint8_t sensor_state; //WHether the comparator output is high or low
 uint16_t led_on_duration; //How long an IR LED pulse is to indicate an LED is to be turned on
-const uint16_t start_com_duration = 200;
+const uint16_t start_com_duration = 200; //How many microseonds a minimum start pulse is
+const uint32_t power_down_duration = 500000; //How many microseonds a minimum power down pulse is
+uint8_t power_down = 1; //Whether the device should be powered down to save the battery - 0 - wake, 1 = powering down, 2 = powered down
+uint8_t pit_counter; //Number of PIT interrupts that have happened
 //I2C
 #define i2cWrite 0x00
 #define i2cRead 0x01
@@ -112,6 +117,11 @@ void ac_interrupt() //Comparator interrupt
   }
 }
 
+ISR(RTC_PIT_vect) {
+    // Clear PIT interrupt flag
+    RTC.PITINTFLAGS = RTC_PI_bm;
+}
+
 void setup() {
   uint8_t i;
 
@@ -125,11 +135,13 @@ void setup() {
   WDT.CTRLA = 0;
   TCA0.SINGLE.CTRLA &= ~(1 << TCA_SINGLE_ENABLE_bp); // Disable Timer/Counter Type A (TCA0)
   TCB0.CTRLA &= ~(1 << TCB_ENABLE_bp);
-  RTC.PITCTRLA = 0; //Disable RTC interrupts
-  RTC.CTRLA = 0; //Disable RTC
-  // RTC.PITINTCTRL = RTC_PI_bm;             // Enable PIT interrupt
-  // RTC.PITCTRLA = RTC_PERIOD_CYC64_gc      // 64 cycles = ~8 ms
-  //               | RTC_PITEN_bm;           // Enable PIT
+  CLKCTRL.OSC32KCTRLA |= (1 << 6); // Enable RTC 32kHz oscillator in standby
+  while (RTC.PITSTATUS & RTC_CTRLBUSY_bm); // Wait for RTC sync
+  RTC.PITCTRLA = RTC_PERIOD_CYC32768_gc | RTC_PITEN_bm; // Enable PIT with 1-second interval (32768 cycles at 32.768kHz)
+  RTC.PITINTCTRL &= ~RTC_PI_bm; //Disable PIT interrupts
+  // RTC.PITINTCTRL = RTC_PI_bm; // Enable PIT interrupt
+  //RTC.PITCTRLA = 0; //Disable RTC interrupts
+  //RTC.CTRLA = 0; //Disable RTC
   //TCB1.CTRLA &= ~(1 << TCB_ENABLE_bp);
  
   //Set all unused pins to poutput LOW to reduce power soncumption
@@ -164,21 +176,8 @@ void setup() {
   tempData[2] = B00000001; //data to Dev_config2 register, comp_group3/2/1 off (default), lod_removal disable (defualt), enable lsd_removal
   tempData[3] = B11110001; //data to Dev_config3 register, weak down deghost (default), vled-2v up deghost (default), 15mA maximum current (default), enable up deghost (default)
                            // Current: 000 = 7.5 mA, 001 = 12.5 mA, 010 = 25 mA, 011 = 37.5 mA, 100 = 50 mA, 101 = 75 mA, 110 = 100 mA
-
-  //Turn off deghost
-  // tempData[0] = B00100000; //data to Dev_initial register, 11 max_line_num (default), set mode 1, 125kHz pwm_fre (default)
-  // tempData[1] = B00000100; //data to Dev_config1 register, 1us sw_blk (default), enable exponential scale dimming curve, phase shift off (default), cs_on_shift off (default)
-  // tempData[2] = B00000000; //data to Dev_config2 register, comp_group3/2/1 off (default), lod_removal disable (defualt), enable lsd_removal
-  // tempData[3] = B00000000; //data to Dev_config3 register, weak down deghost (default), vled-2v up deghost (default), 15mA maximum current (default), enable up deghost (default)
   i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, startRegAddress, i2cWrite, 4, &tempData[0]);
-  /* read example */
-  //i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, chip_en_reg, i2cRead, 5, &tempData[0]); //e.g. read 5 bytes data from chip_en_reg register
-  //setValuesOverSerial();
-  //rain();
-  //counterChase();
-  //sensorMeter();
-  //zigzag();
-  //comparatorTest();
+
   pinMode(sensor, INPUT);
   for(i = 0; i < n_leds; i++) tempData[i] = 0x00;
   i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &tempData[i]); //Max I2C length isdot_onoff0
@@ -191,72 +190,8 @@ void setup() {
 }
 
 void loop() {
-  uint16_t i, j;
-  uint8_t display[24];
-  uint8_t nec_byte[16];
-  bool nec_valid; //Whether the NEC encoding is correct
-  bool blank_display; //Whether any pixels are on in the frame
-
-  set_sleep_mode(SLEEP_MODE_STANDBY);  // Lower power than idle, retains AC
-  sleep_enable();
-  sleep_cpu(); // Device goes to sleep here, wakes on AC interrupt
-  sleep_disable(); // Disable after wake (optional)
-  tempData[0] = 0x01; //data to Chip_en register, enable chip
-  i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, chip_en_reg, i2cWrite, 1, &tempData[0]);
-  //while(sensor_state != 2); //Wait for the start of a communication
-  timeout_timer = 0;
-  while((sensor_state != 1 || interrupt_duration < start_com_duration) && timeout_timer < comm_timeout); //Wait for LED to go low again
-  interrupt_duration = 0;
-  timeout_timer = 0;
-  while(!interrupt_duration && timeout_timer < comm_timeout); //Wait for first timing pulse
-  led_on_duration = interrupt_duration>>1; //Record the duration of the first pulse, as this indicated the LED-on duration
-  for(i=0; i<24; i++) display[i] = 0; //Zero out the display array
-  timeout_timer = 0;
-  interrupt_duration = 0;
-  for(i=0; i<n_rows*2 && timeout_timer < comm_timeout; i++){ //2 bytes per row for NEC IR encoding
-    nec_byte[i] = 0;
-    for(j=0; j<8 && timeout_timer < comm_timeout;){
-      if(sensor_state == 1 && interrupt_duration){
-        if(interrupt_duration > led_on_duration) nec_byte[i] += 1 << j;
-        interrupt_duration = 0; //Reset interrupt duration
-        timeout_timer = 0; //Reset timout timer
-        j++; //Increment index
-      }
-    }
-  }
-  nec_valid = true;
-  blank_display = true;
-  for(i=0; i<n_rows*2 && nec_valid; i+=2){ //Verify that NEC encoding is valid
-    nec_byte[i+1] ^= nec_byte[i];
-    if(nec_byte[i+1] != 0xFF) nec_valid = false;
-    if(nec_byte[i]) blank_display = false;
-  }
-  if(i<n_rows*2 || j<8 || !nec_valid || blank_display){ //If an error happened during communication
-    for(i=0; i<24; i++) display[i] = 0; //Zero out the display array
-    display[1] |= 1; //Turn on red indicator LED 
-    blank_display = true;
-  }
-  else{
-    for(i=0; i<n_rows; i++){
-      uint16Union.bytes_var = 0;
-      for(j=0; j<8; j++){
-        if(nec_byte[i*2] & 1 << j) uint16Union.bytes_var += 1 << led_order[j];
-      }
-      display[i*3] = uint16Union.bytes[0]; //shift display down one row
-      display[i*3+1] = uint16Union.bytes[1]; //shift display down one row
-    }
-    display[1] |= 1; //Turn on red indicator LED 
-  }
-  i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &display[0]);
-  PORTC.OUTSET = PIN0_bm;
-  delayMicroseconds(10);
-  PORTC.OUTCLR = PIN0_bm;
-  delayMicroseconds(100);
-  if(blank_display){ //Disable chip if all LEDs are off
-    tempData[0] = 0x00; //data to Chip_en register, enable chip
-    i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, chip_en_reg, i2cWrite, 1, &tempData[0]);
-    delayMicroseconds(100);
-  }
+  if(power_down) powerDown();
+  else monitorIRStream();
 }
 
 ///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C///////////////////I2C
@@ -339,152 +274,138 @@ void stopComparator(){
   sensor_state = 0; //Set state to standby
 }
 
+void monitorIRStream(){
+  uint16_t i, j;
+  uint8_t nec_byte[16];
+  bool nec_valid; //Whether the NEC encoding is correct
+  bool blank_display; //Whether any pixels are on in the frame
 
-///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS///////////////////PATTERNS
-#define wordsNum 8  //8 words to display in wordRollingPlayback pattern
-#define wordsRow 16 //10 rows of LED dots to display the words
-#define wordsCol 8 //6 cols of LED dots to display the words
-
-void comparatorTest(){
-  int i, j, k;
-  uint16_t counter;
-  uint16_t mask;
-  uint8_t display[24];
-  uint8_t duration;
-  
-  pinMode(sensor, INPUT);
-  for(i = 0; i < n_leds; i++) tempData[i] = 0x00;
-  i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &tempData[i]); //Max I2C length isdot_onoff0
-  for(i = 0; i < n_leds; i++) tempData[i] = 0xFF;
-  for(i = 0; i < n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dc0+i, i2cWrite, 31, &tempData[i]);
-  for(i=0; i<n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, pwm_bri0+i, i2cWrite, 31, &tempData[i]); //Max I2C length isdot_onoff0
-  for(i=0; i<24; i++) display[i] = 0;
-  startComparator();
-  while(true){
-    if(sensor_state == 1){
-      duration = interrupt_duration>>2;
-      counter = 0;
-      for(i=0; i<8; i++){
-        uint16Union.bytes_var = 0;
-        for(j=0; j<8; j++){
-          if(counter == duration) uint16Union.bytes_var += 1 << led_order[j];
-          counter++;
-        } 
-        display[i*3] = uint16Union.bytes[0]; //shift display down one row
-        display[i*3+1] = uint16Union.bytes[1]; //shift display down one row
+  set_sleep_mode(SLEEP_MODE_STANDBY);  // Lower power than idle, retains AC
+  sleep_enable();
+  sleep_cpu(); // Device goes to sleep here, wakes on AC interrupt
+  sleep_disable(); // Disable after wake (optional)
+  tempData[0] = 0x01; //data to Chip_en register, enable chip
+  i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, chip_en_reg, i2cWrite, 1, &tempData[0]); //Send enable command
+  timeout_timer = 0;
+  while((sensor_state != 1 || interrupt_duration < start_com_duration) && timeout_timer < wake_timeout); //Wait for LED to go low again
+  if(interrupt_duration > power_down_duration && timeout_timer < wake_timeout){ //If an extended power-down pulse was received, power down device
+    power_down = 1;
+    return;
+  }
+  interrupt_duration = 0;
+  timeout_timer = 0;
+  while(!interrupt_duration && timeout_timer < comm_timeout); //Wait for first timing pulse
+  led_on_duration = interrupt_duration>>1; //Record the duration of the first pulse, as this indicated the LED-on duration
+  for(i=0; i<24; i++) display[i] = 0; //Zero out the display array
+  timeout_timer = 0;
+  interrupt_duration = 0;
+  for(i=0; i<n_rows*2 && timeout_timer < comm_timeout; i++){ //2 bytes per row for NEC IR encoding
+    nec_byte[i] = 0;
+    for(j=0; j<8 && timeout_timer < comm_timeout;){
+      if(sensor_state == 1 && interrupt_duration){
+        if(interrupt_duration > led_on_duration) nec_byte[i] += 1 << j;
+        interrupt_duration = 0; //Reset interrupt duration
+        timeout_timer = 0; //Reset timout timer
+        j++; //Increment index
       }
     }
-    else{
-      for(i=0; i<24; i++) display[i] = 0;
-      display[0] = 256;
-    }
-    i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &display[0]);
   }
-
+  nec_valid = true;
+  blank_display = true;
+  for(i=0; i<n_rows*2 && nec_valid; i+=2){ //Verify that NEC encoding is valid
+    nec_byte[i+1] ^= nec_byte[i];
+    if(nec_byte[i+1] != 0xFF) nec_valid = false;
+    if(nec_byte[i]) blank_display = false;
+  }
+  if(i<n_rows*2 || j<8 || !nec_valid || blank_display){ //If an error happened during communication
+    for(i=0; i<24; i++) display[i] = 0; //Zero out the display array
+    display[1] |= 1; //Turn on red indicator LED 
+    blank_display = true;
+  }
+  else{
+    for(i=0; i<n_rows; i++){
+      uint16Union.bytes_var = 0;
+      for(j=0; j<8; j++){
+        if(nec_byte[i*2] & 1 << j) uint16Union.bytes_var += 1 << led_order[j];
+      }
+      display[i*3] = uint16Union.bytes[0]; //shift display down one row
+      display[i*3+1] = uint16Union.bytes[1]; //shift display down one row
+    }
+    display[1] |= 1; //Turn on red indicator LED 
+  }
+  i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &display[0]);
+  if(blank_display){ //Disable chip if all LEDs are off
+    tempData[0] = 0x00; //data to Chip_en register, enable chip
+    i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, chip_en_reg, i2cWrite, 1, &tempData[0]);
+    delayMicroseconds(200);
+  }
+  else vsync();
 }
 
-void rain(){
-  int i, j, k;
-  uint8_t display[24];
-  const uint8_t inv_density = 9;
+void powerDown(){
+  uint8_t i;
+  bool j;
 
-  for(i = 0; i < n_leds; i++) tempData[i] = 0x00;
-  i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &tempData[i]); //Max I2C length isdot_onoff0
-  for(i = 0; i < n_leds; i++) tempData[i] = 0xFF;
-  for(i = 0; i < n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dc0+i, i2cWrite, 31, &tempData[i]);
-  for(i=0; i<n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, pwm_bri0+i, i2cWrite, 31, &tempData[i]); //Max I2C length isdot_onoff0
-
-  while(true){
-    for(i=7; i>0; i--){
-      for(j=2; j>=0; j--) display[i*3+j] = display[(i-1)*3+j]; //shift display down one row
+  if(power_down == 1){ //Send indication that device is powering down
+    AC0.CTRLA &= ~AC_RUNSTDBY_bm;  //Disable comparator in idle to save power
+    delay(1);
+    flashLED(2);
+    power_down = 2;
+    pit_counter = 0; //Reset the PIT counter to catch wake commands
+    RTC.PITINTCTRL |= RTC_PI_bm; // Enable PIT interrupt
+  }
+  set_sleep_mode(SLEEP_MODE_STANDBY);  // Lower power than idle, retains AC
+  sleep_enable();
+  sleep_cpu(); // Device goes to sleep here, wakes on AC interrupt
+  sleep_disable(); // Disable after wake (optional)
+  if(!Comparator0.read()){ //Turn on the read LED if the comparator sees an IR pulse
+    if(pit_counter++){ //If LED is on for more than a second, wake from sleep
+      flashLED(1);
+      AC0.CTRLA |= AC_RUNSTDBY_bm;  //Allow the comparator to run when the microcontroller is in idle
+      power_down = 0;
+      timeout_timer = 0;
+      while(!Comparator0.read()){ //Wait for LED to turn off - waking at least 1x per second
+        set_sleep_mode(SLEEP_MODE_STANDBY);  
+        sleep_enable();
+        sleep_cpu(); // Device goes to sleep here, wakes on AC interrupt
+        sleep_disable(); // Disable after wake (optional)
+        flashLED(1);
+      }
+      RTC.PITINTCTRL &= ~RTC_PI_bm; //Disable RTC interrupts
+      flashLED(2);
     } 
-    uint16Union.bytes_var = 0;
-    for(i=7; i>=0; i--){
-        if(!random(inv_density)) uint16Union.bytes_var += 1 << led_order[i];
-    }
-    display[0] = uint16Union.bytes[0];
-    display[1] = uint16Union.bytes[1];
-    i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &display[0]);
-    delay(20);
+  }
+  else pit_counter = 0; //Otherwise reset the PIT counter
+}
+
+void flashLED(uint8_t n_flashes){
+  uint8_t i;
+  for(i=0; i<24; i++) display[i] = 0x00; //Zero out the display array
+  display[1] |= 1; //Turn on red indicator LED 
+  i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &display[0]);
+  vsync();
+  for(i=0; i<n_flashes; i++){ //Flast red LED to confirm sleep command receieved
+      tempData[0] = 0x01; //data to Chip_en register, enable chip
+      i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, chip_en_reg, i2cWrite, 1, &tempData[0]); //Send enable command
+      delay(1);
+      i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &display[0]);
+      vsync();
+      delay(200);
+      tempData[0] = 0x00; //data to Chip_en register, enable chip
+      i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, chip_en_reg, i2cWrite, 1, &tempData[0]); //Send disable command
+      delay(200);
   }
 }
 
-void counterChase(){
-  uint16_t adc;
-  int i, j, k;
-  uint8_t counter;
-  uint8_t display[24];
+//RTC.PITCTRLA = 0; //Disable RTC interrupts
+//AC0.CTRLA |= AC_RUNSTDBY_bm;  //Allow the comparator to run when the microcontroller is in idle
+// RTC.PITCTRLA = RTC_PERIOD_CYC32768_gc | RTC_PITEN_bm; // Enable PIT with 1-second interval (32768 cycles at 32.768kHz)
+// RTC.PITINTCTRL = RTC_PI_bm; // Enable PIT interrupt
+// RTC.PITCTRLA = 0; //Disable RTC interrupts
+// RTC.CTRLA = 0; //Disable RTC
 
-  for(i = 0; i < n_leds; i++) tempData[i] = 0x00;
-  i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &tempData[i]); //Max I2C length isdot_onoff0
-  for(i = 0; i < n_leds; i++) tempData[i] = 0xFF;
-  for(i = 0; i < n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dc0+i, i2cWrite, 31, &tempData[i]);
-  for(i=0; i<n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, pwm_bri0+i, i2cWrite, 31, &tempData[i]); //Max I2C length isdot_onoff0
-
-  while(true){
-    // adc = analogRead(sensor);
-    // adc >>= 6;
-    // adc = 64-adc;
-    adc++;
-    if(adc > 64) adc = 0;
-    counter = 0;
-    for(i=0; i<8; i++){
-      uint16Union.bytes_var = 0;
-      for(j=0; j<8; j++){
-        if(counter == adc) uint16Union.bytes_var += 1 << led_order[j];
-        counter++;
-      } 
-      display[i*3] = uint16Union.bytes[0]; //shift display down one row
-      display[i*3+1] = uint16Union.bytes[1]; //shift display down one row
-    }
-    i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &display[0]);
-    delay(100); 
-  }
-}
-
-void sensorMeter(){
-  uint16_t adc;
-  int i, j, k;
-  uint16_t counter;
-  uint16_t mask;
-  uint8_t display[24];
-  const uint8_t inv_density = 9;
-  bool debug = false;
-
-  pinMode(sensor, INPUT);
-  for(i = 0; i < n_leds; i++) tempData[i] = 0x00;
-  i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &tempData[i]); //Max I2C length isdot_onoff0
-  for(i = 0; i < n_leds; i++) tempData[i] = 0xFF;
-  for(i = 0; i < n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dc0+i, i2cWrite, 31, &tempData[i]);
-  for(i=0; i<n_leds; i+=31) i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, pwm_bri0+i, i2cWrite, 31, &tempData[i]); //Max I2C length isdot_onoff0
-  for(i=0; i<24; i++) display[i] = 0;
-  while(true){
-    adc = analogRead(sensor);
-    adc>>=2;
-    adc -= 170;
-    adc = 64-adc;
-    counter = 0;
-    for(i=0; i<8; i++){
-      uint16Union.bytes_var = 0;
-      for(j=0; j<8; j++){
-        if(counter <= adc) uint16Union.bytes_var += 1 << led_order[j];
-        counter++;
-      } 
-      display[i*3] = uint16Union.bytes[0]; //shift display down one row
-      display[i*3+1] = uint16Union.bytes[1]; //shift display down one row
-    }
-
-    //Show binary value
-    // for(i=0; i<2; i++){
-    //   uint16Union.bytes_var = 0;
-    //   for(j=0; j<8; j++){
-    //     mask = 1 << j + i*8;
-    //     if(adc & mask) uint16Union.bytes_var += 1 << led_order[j];
-    //   } 
-    //   display[i*3] = uint16Union.bytes[0]; //shift display down one row
-    //   display[i*3+1] = uint16Union.bytes[1]; //shift display down one row
-    // }
-    i2cSendReceive(I2C_TARGET_ADDRESS_INDEPENDENT, dot_onoff0, i2cWrite, 24, &display[0]);
-    delay(100); 
-  }
+void vsync(){
+  PORTC.OUTSET = PIN0_bm;
+  delayMicroseconds(10);
+  PORTC.OUTCLR = PIN0_bm;
 }
