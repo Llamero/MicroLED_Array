@@ -13,7 +13,7 @@ uint8_t tempData[396]; //store the data to write
 uint8_t display[24]; //store the display bytes
 uint16_t adc; //General adc value variable
 uint8_t sensor_baseline; //The baseline voltage the photodiode is at when there is only background illumination
-const int baseline_offset = 2; //How much to subtract from the measured baseline to stop false triggering
+const int baseline_offset = 1; //How much to subtract from the measured baseline to stop false triggering
 elapsedMicros interrupt_timer; //Timer for duration of sensor interrupt
 elapsedMillis timer;  //General ms timer for messages and timeouts
 elapsedMicros timeout_timer; //Timer for checking if communication has timed out
@@ -250,7 +250,7 @@ void startComparator(){
   Comparator.reference = comparator::ref::vref_vdd; // Set the DACREF voltage
   Comparator.dacref = sensor_baseline;
 
-  Comparator.hysteresis = comparator::hyst::medium;  // Use 50mV hysteresis
+  Comparator.hysteresis = comparator::hyst::small;  // Use 50mV hysteresis - disable, small, medium, large
   Comparator.output = comparator::out::disable;      // Enable output PB3
   Comparator.output_initval = comparator::out::init_high; // Output pin high after initialization
   Comparator.attachInterrupt(ac_interrupt, CHANGE);
@@ -259,12 +259,7 @@ void startComparator(){
   AC0.CTRLA &= ~(AC_OUTEN_bm); //Disable output
   Comparator.init();
   Comparator.start();
-  while(!Comparator0.read()){
-    AC0.DACREF = sensor_baseline--;
-    delay(10);
-  }
-  sensor_baseline -= baseline_offset;
-  AC0.DACREF = sensor_baseline;
+  calibrateComparator();
   sensor_state = 1;  //Set state to active
 }
 
@@ -272,6 +267,20 @@ void stopComparator(){
   Comparator.detachInterrupt();
   Comparator.stop(true); // Stop comparator. Digital input on the pins that this comparator was using will be re-enabled.
   sensor_state = 0; //Set state to standby
+}
+
+void calibrateComparator(){
+    Comparator.detachInterrupt();
+    sensor_baseline = 255;
+    while(true){
+    AC0.DACREF = sensor_baseline--;
+    delay(10);
+    if(Comparator0.read()) break;
+  }
+  sensor_baseline -= baseline_offset;
+  AC0.DACREF = sensor_baseline;
+  delay(10);
+  Comparator.attachInterrupt(ac_interrupt, CHANGE);
 }
 
 void monitorIRStream(){
@@ -373,6 +382,7 @@ void powerDown(){
       }
       RTC.PITINTCTRL &= ~RTC_PI_bm; //Disable RTC interrupts
       flashLED(2);
+      calibrateComparator();
     } 
   }
   else pit_counter = 0; //Otherwise reset the PIT counter
